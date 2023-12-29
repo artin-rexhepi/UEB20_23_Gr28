@@ -73,3 +73,65 @@ footer a:hover{
     background-color: rgb(152, 143, 165) ;
 
 }
+
+.reviews-main {
+    font-size: 1.5vw;
+    padding-top: 6px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    margin: 40px 0;
+}
+
+.reviews-container {
+    background-color: rgb(50, 50, 50);
+    width: 50vw;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: -4px -4px 1px rgb(143, 133, 158);
+}
+
+.review-card {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgb(50, 50, 50);
+}
+
+.profile-container {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.profile-picture-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 6px 20px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.profile-picture-small.active {
+    transform: scale(1.02);
+    border: 3px solid rgb(143, 133, 158);
+}
+
+.reviewer-name {
+    color: rgb(143, 133, 158);
+    font-size: 0.8vw;
+    margin-top: 10px;
+}
+
+.review-text {
+    font-weight: lighter;
+    font-size: 0.8vw;
+    max-width: 30vw;
+    margin: auto;
+}
+
+.review-title {
+    font-weight: bold;
+    font-size: 1.5vw;
+}
