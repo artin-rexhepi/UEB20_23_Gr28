@@ -75,3 +75,59 @@ const reviewsData = [
         initializeReviews();
 
         
+
+        const teamMembers = [
+            { name: 'Theresa Smith', title: 'General Manager', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff1.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } },
+            { name: 'Albert Mills', title: 'Cosmotologist', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff2.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } },
+            { name: 'Sandra Adams', title: 'Receptionist', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff3.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } }
+        ];
+
+        // Function to create a team member card
+        function createTeamMemberCard(member) {
+            const teamContainer = document.getElementById('teamContainer');
+
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('team-member');
+            
+            const img = document.createElement('img');
+            img.classList.add('member-img');
+            img.src = member.imgSrc;
+            img.alt = `Profile of ${member.name}`;
+
+            const infoContainer = document.createElement('div');
+            infoContainer.classList.add('member-info');
+
+            const name = document.createElement('div');
+            name.classList.add('member-name');
+            name.textContent = member.name;
+
+            const title = document.createElement('div');
+            title.classList.add('member-title');
+            title.textContent = member.title;
+
+            
+
+            const socialIcons = document.createElement('div');
+            socialIcons.classList.add('social-icons');
+
+            // Create social icons
+            for (const platform in member.social) {
+                const iconImg = document.createElement('img');
+                iconImg.src = member.social[platform];
+                iconImg.alt = platform;
+                socialIcons.appendChild(iconImg);
+            }
+
+            infoContainer.appendChild(name);
+            
+            infoContainer.appendChild(title);
+            memberCard.appendChild(img);
+            memberCard.appendChild(infoContainer);
+            memberCard.appendChild(socialIcons);
+
+            // Append the card to the team container
+            teamContainer.appendChild(memberCard);
+        }
+
+        // Create team member cards
+        teamMembers.forEach(createTeamMemberCard);

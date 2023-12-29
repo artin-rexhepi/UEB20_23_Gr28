@@ -2,7 +2,7 @@
 
 }
 footer{
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
@@ -117,6 +117,10 @@ footer a:hover{
     transform: scale(1.02);
     border: 3px solid rgb(143, 133, 158);
 }
+.profile-picture-small:hover{
+    transform: scale(1.02);
+    border: 3px solid rgb(143, 133, 158);
+}
 
 .reviewer-name {
     color: rgb(143, 133, 158);
@@ -134,4 +138,83 @@ footer a:hover{
 .review-title {
     font-weight: bold;
     font-size: 1.5vw;
+}
+
+.team-main {
+    margin: 3vw auto;
+}
+
+.team-main-title {
+    text-align: center;
+    font-size: 4vw;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1vw;
+}
+
+.team-member {
+    position: relative;
+    width: 15vw;
+    margin: 1vw;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: -0.5vw -0.5vw 0.025vw rgb(143, 133, 158);
+}
+
+.member-img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member:hover {
+    box-shadow: -1vw -1vw 0.25vw rgb(143, 133, 158);
+}
+
+.team-member:hover .member-img {
+    filter: brightness(0.3);
+}
+
+.member-info {
+    text-align: center;
+    padding: 1vw;
+    background-color: #fff;
+}
+
+.member-name {
+    margin-bottom: 0.5vw;
+}
+
+.social-icons {
+    height: 1.5vw;
+    position: absolute;
+    top: 6vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 0.5vw;
+    text-decoration: none;
+    color: #333;
+    font-size: 1vw;
+}
+
+.team-member:hover .social-icons {
+    display: flex;
+}
+
+.member-title {
+    font-size: 0.8vw;
+    color: rgb(143, 133, 158);
+}
+
+.member-name {
+    font-size: 1vw;
 }
