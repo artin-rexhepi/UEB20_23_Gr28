@@ -1,7 +1,7 @@
 const reviewsData = [
-            { name: "JANE NEDDERY", title: "Perfect spa resort & services!", text: "The minute you walk out of the airport you are greeted with a warm welcome from Royal Villas staff member, and it doesn not stop. The staff truly seems to love their job and want to make sure your visit and stay is everything you expect.", profilePicture: "assets/bootstrap-5.0.2-dist/images/reviewer1.jpg" },
-            { name: "SAM BROWN", title: "Greate atmosphere and level of customer service", text: "Gota Royal Villas certificate as a gift a few months ago, and I really had a fantastic spa experience there. I arrived early & was greeted warmly at the door. Surprisingly I didn't have to wait Everything was perfect. Highly recommend this amazing place to everybody!", profilePicture: "assets/bootstrap-5.0.2-dist/images/reviewer2.jpg" },
-            { name: "JULIE ADAMS", title: "Wonderful and friendly environment", text: "No better way to rediscover the joy in everyday living than at Royal Villas. Second time to visit and experiences was just as powerful as the first. They exceeded all my expectations once again. This is the place to visit if you are looking for high-quality spa!", profilePicture: "assets/bootstrap-5.0.2-dist/images/reviewer3.jpg" }
+            { name: "JANE NEDDERY", title: "Perfect spa resort & services!", text: "The minute you walk out of the airport you are greeted with a warm welcome from Royal Villas staff member, and it doesn not stop. The staff truly seems to love their job and want to make sure your visit and stay is everything you expect.", profilePicture: "/assets/bootstrap-5.0.2-dist/images/reviewer1.jpg" },
+            { name: "SAM BROWN", title: "Greate atmosphere and level of customer service", text: "Gota Royal Villas certificate as a gift a few months ago, and I really had a fantastic spa experience there. I arrived early & was greeted warmly at the door. Surprisingly I didn't have to wait Everything was perfect. Highly recommend this amazing place to everybody!", profilePicture: "/assets/bootstrap-5.0.2-dist/images/reviewer2.jpg" },
+            { name: "JULIE ADAMS", title: "Wonderful and friendly environment", text: "No better way to rediscover the joy in everyday living than at Royal Villas. Second time to visit and experiences was just as powerful as the first. They exceeded all my expectations once again. This is the place to visit if you are looking for high-quality spa!", profilePicture: "/assets/bootstrap-5.0.2-dist/images/reviewer3.jpg" }
         ];
 
         let currentIndex = 0;
@@ -77,9 +77,9 @@ const reviewsData = [
         
 
         const teamMembers = [
-            { name: 'Theresa Smith', title: 'General Manager', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff1.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } },
-            { name: 'Albert Mills', title: 'Cosmotologist', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff2.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } },
-            { name: 'Sandra Adams', title: 'Receptionist', imgSrc: 'assets/bootstrap-5.0.2-dist/images/staff3.jpg', social: { instagram: 'assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: 'assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: 'assets/bootstrap-5.0.2-dist/images/twitter.png' } }
+            { name: 'Theresa Smith', title: 'General Manager', imgSrc: '/assets/bootstrap-5.0.2-dist/images/staff1.jpg', social: { instagram: '/assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: '/assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: '/assets/bootstrap-5.0.2-dist/images/twitter.png' } },
+            { name: 'Albert Mills', title: 'Cosmotologist', imgSrc: '/assets/bootstrap-5.0.2-dist/images/staff2.jpg', social: { instagram: '/assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: '/assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: '/assets/bootstrap-5.0.2-dist/images/twitter.png' } },
+            { name: 'Sandra Adams', title: 'Receptionist', imgSrc: '/assets/bootstrap-5.0.2-dist/images/staff3.jpg', social: { instagram: '/assets/bootstrap-5.0.2-dist/images/instagram.png', facebook: '/assets/bootstrap-5.0.2-dist/images/facebook.png', twitter: '/assets/bootstrap-5.0.2-dist/images/twitter.png' } }
         ];
 
         // Function to create a team member card
