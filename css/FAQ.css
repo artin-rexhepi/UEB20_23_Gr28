@@ -1,7 +1,108 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../assets/fonts/Poppins-SemiBold.ttf);
+}
+
 body{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
     
 }
+
+
+.logoja{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.logoja img{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-top: 1px solid #a3a3a3 ;
+    border-bottom: 1px solid #a3a3a3;
+    font-family: "Poppins";
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li{
+    margin: 0 10px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: all ease-in 0.2s;
+}
+
+.navbar a:hover{
+    font-family: Poppins;
+    color: #8f859e;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0;
+    height: 300px;
+    width: 100%;
+    background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
+    color: white;
+    font-family: "Poppins";
+}
+
+.header h1{
+    font-family: Poppins;
+    font-size: 60px;
+    margin: 0;
+}
+
+.header a{
+    font-family: "Poppins";
+    color: #dfdfdf;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+
+.header a:hover{
+    color: white;
+}
+
+.header p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
 .parent-list{
     list-style-type: square;
     color: rgb(143, 133, 158);
@@ -115,4 +216,23 @@ footer a:hover {
     transform: scale(1.02);
     background-color: rgb(152, 143, 165);
 
+}
+
+button#backToTopBtn {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px;
+    background-color:#8f859e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button#backToTopBtn.show {
+    opacity: 1;
 }
