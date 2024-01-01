@@ -134,11 +134,10 @@ const reviewsData = [
 
 
         // -------------------------- Butoni back to top --------------------------
-
 document.addEventListener("DOMContentLoaded", () => {
     // Get the button
     const mybutton = document.getElementById("backToTopBtn");
-
+    const buttonAudio = document.getElementById('backToTopSound')
     // When the user scrolls down 90px from the top of the document, show the button
     window.onscroll = () => scrollFunction();
 
@@ -156,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const topFunction = () => {
         // Smooth scroll to the top
+        buttonAudio.play();
         window.scrollTo({
             top: 0,
             behavior: "smooth"

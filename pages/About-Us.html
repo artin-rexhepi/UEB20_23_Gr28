@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css\About-Us.css">
-    <link rel="stylesheet" href="file:////assets\bootstrap-5.0.2-dist">
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="logoja">
@@ -115,7 +115,19 @@
                 <h2>Join our Newsletter</h2>
                 <form>
                     <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
-                    <input type="submit" class="footer-newsletter-subscribebtn" value="Subscribe">
+                    <button  id= "SubscribeBtn "class="footer-newsletter-subscribebtn" onclick="playAudio()">Subscribe</button>
+                    <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
+                    <script>
+                        // Get references to the button and audio element
+                        const subscribeButton = document.getElementById('SubscribeBtn');
+                        const subscribeAudio = document.getElementById('SubscribeAudio');
+
+                        // Add a function to play the audio
+                        function playAudio() {
+                            // Play the audio when the button is clicked
+                            subscribeAudio.play();
+                        };
+                    </script>
                 </form>
             </div>
             
@@ -136,6 +148,8 @@
     </footer>
 
     <button id="backToTopBtn" title="Go to top" onclick="topFunciton()"><img width="30px" height="30px" src="../assets/images/up-arrow.png"/></button>
+    <audio id="backToTopSound" src="/assets\audio\whoosh.mp3" type="audio/mp3"></audio>
 <script src="/js\About-Us.js"></script>
+<script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
