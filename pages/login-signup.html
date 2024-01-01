@@ -6,6 +6,14 @@
     <title>Login | Signup</title>
     <link rel="shortcut icon" href="/assets/favicon.ico"> 
     <link rel="stylesheet" href="../css/login-signup.css">
+    <style>
+        .termsAndConditions-container {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="overlay"></div>
@@ -45,6 +53,10 @@
                 <input type="password" class="form-input" autofocus placeholder="Confirm Password">
                 <div class="form-input-error-message"></div>
             </div>
+            <label class="termsAndConditions-container" style="font-size: small; color: gray;">
+                <input type="checkbox">
+                Terms And Conditions
+            </label>
             <button class="form-button" type="submit">Continue</button>
             <p class="form-text">
                 <a class="form-link" id="linkLogin">Already have an account? Login</a>
