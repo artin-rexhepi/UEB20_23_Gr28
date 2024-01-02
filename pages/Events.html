@@ -56,16 +56,16 @@
                     <th class="align-middle text-center" scope="row" style="width: 20%;">EVERY DAY</th>
                     <td ><img src="https://virginhotels.com/media/d03j5ggb/photo-dec-15-2023-5-07-32-pm.jpg?width=400&height=400&quality=60&v=1da347b6e19fe70" width="223px" height="223"></td>
                     <td>
-                        <h1 class="text-center">Nomad Snow Globes</h1>
+                        <h1 class="text-center event-title">Nomad Snow Globes</h1>
                         <h6 class="text-center">11AM - 3PM & 4PM - 11PM | Rooftop</h6>
                         <p class="text-center">Step into our 10 life-sized Winter Snow Globes on the Spring Terrace - the perfect way to stay cozy all winter long.</p>
                     </td>
                   </tr>
                   <tr>
-                    <th class="align-middle text-center" scope="row" style="width: 20%;">EVERY <br/>WEEKDAY</th>
+                    <th class="align-middle text-center " scope="row" style="width: 20%;">EVERY <br/>WEEKDAY</th>
                     <td><img src="https://virginhotels.com/media/specjlcx/happyhour.jpg?rxy=0.44665670141704983,0.4351194470942674&width=400&height=400&quality=60&v=1d9f78392b01510" width="223px" height="223"></td>
                     <td>
-                        <h1 class="text-center">Sundown Social: Happy Hour</h1>
+                        <h1 class="text-center event-title">Sundown Social: Happy Hour</h1>
                         <h6 class="text-center">4 pm - 8 pm | Second floor Restaurant</h6>
                         <p class="text-center">Pull up a seat and discover the perfect blend of food, cocktails, & music with after work entertainment ranging from jazz to DJs, it’s not just a happy hour; it’s a social affair. So let loose and unwind at Spring every Monday through Friday from 4-8pm because life’s too short to wait for the weekend.</p>
                     </td>
@@ -74,7 +74,7 @@
                     <th class="align-middle text-center" scope="row" style="width: 20%;">EVERY <br/>TUESDAY & THURSDAY</th>
                     <td><img src="https://shorturl.at/aCPQV" width="223px" height="223"></td>
                     <td>
-                        <h1 class="text-center">Live At Spring</h1>
+                        <h1 class="text-center event-title">Live At Spring</h1>
                         <h6 class="text-center">4 pm - 9 pm | Spring Club</h6>
                         <p class="text-center">Enjoy an intimate evening at Spring and start the night off with a lively DJ set to kick off Happy Hour from 4-6pm, that slowly transitions into Live Jazz from 6-9pm, featuring some of the greatest young talent in Prishtina City</p>
                     </td>
@@ -83,7 +83,7 @@
                     <th class="align-middle text-center" scope="row" style="width: 20%;">EVERY <br/>WEDNESDAY</th>
                     <td><img src="https://shorturl.at/jrEPS" width="223px" height="223"></td>
                     <td>
-                        <h1 class="text-center">Selectors</h1>
+                        <h1 class="text-center event-title">Selectors</h1>
                         <h6 class="text-center">5 pm - 9 pm | Spring Club</h6>
                         <p class="text-center">Your Wednesday night happy hour entertainment is brought to you by Soul in the Horn curator Derick Prosper, bringing his legendary talents of eclectic performers and DJs to Spring from 5 - 9pm.</p>
                     </td>
@@ -92,7 +92,7 @@
                     <th class="align-middle text-center" scope="row" style="width: 20%;">EVERY <br/>FRIDAY & SATURDAY</th>
                     <td><img src="https://shorturl.at/dfyF4" width="223px" height="223"></td>
                     <td>
-                        <h1 class="text-center">Twilight</h1>
+                        <h1 class="text-center event-title">Twilight</h1>
                         <h6 class="text-center">5 pm - 9 pm | Spring Club</h6>
                         <p class="text-center">Ease into the evening at Spring for cocktails, good vibes, and curated jams from some of Prishtina’s most experienced selectors every Friday & Saturday from 5-9pm.</p>
                     </td>
@@ -102,8 +102,65 @@
               </table>
         </div>
     </div>
+
+    <div class="promoters">
+        <h1 class="text-center promoters-title">#springluxury</h1>
+    </div>
+
+        <footer>
+            <div class="row footer-main">
+                <div class="col-md-3 footer-main-opening">
+                    <h2>Opening Hours</h2>
+                        <p><span class="footer-weekendweekdays">Weekdays:</span> 8:00 AM - 8:00 PM</p>
+                        <p><span class="footer-weekendweekdays">Weekends:</span> 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="col-md-3 footer-main-adress">
+                    <h2 >Address</h2>
+                        <p><span><a href="#"
+                                    target="_blank">
+                                    <address><img src="/assets\images\location.png" class="footer-location-icon">6036 Richmond Hwy, Alexandria, VA 2230</address>
+                                </a></span></p>
+                        <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1 (409) 987–5874</a></p>
+                </div>
+                <div class="col-md-3 footer-main-newsletter">
+                    <h2>Join our Newsletter</h2>
+                    <form>
+                        <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
+                        <button  id= "SubscribeBtn "class="footer-newsletter-subscribebtn" onclick="playAudio()">Subscribe</button>
+                        <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
+                        <script>
+                            // Get references to the button and audio element
+                            const subscribeButton = document.getElementById('SubscribeBtn');
+                            const subscribeAudio = document.getElementById('SubscribeAudio');
+    
+                            // Add a function to play the audio
+                            function playAudio() {
+                                // Play the audio when the button is clicked
+                                subscribeAudio.play();
+                            };
+                        </script>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
+                        class="footer-socials-icon"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
+                        class="footer-socials-icon"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
+                        class="footer-socials-icon"></a>
+            </div>
+            
+            <div class="footer-copyright">
+                &copy; Royal Villas. All Rights Reserved
+            </div>
+            
+        </footer>
     
     
+    <button id="backToTopBtn" title="Go to top" onclick="topFunciton()"><img width="30px" height="30px" style="display: flex; align-items: center; justify-content: center;" src="../assets/images/backToTop.png"/></button>
+    <audio id="backToTopSound" src="/assets\audio\whoosh.mp3" type="audio/mp3"></audio>
     <script src="../js/Events.js"></script>
 </body>
 </html>

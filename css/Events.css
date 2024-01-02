@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @font-face {
     font-family: "Poppins";
     src: url(../assets/fonts/Poppins-Regular.ttf);
@@ -8,9 +9,17 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 5px auto;
 }
+
+.promoters{
+    width: 100%;
+    background-color: #8f859e;
+    padding: 20px;
+    color: white;
+}
+
 
 /*NAVBARI*/
 .logoja{
@@ -81,7 +90,7 @@ body {
     margin: 30px 0;
     height: 300px;
     width: 100%;
-    background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
+    background-image: url(https://shorturl.at/glmC6);
     color: white;
     font-family: "Poppins";
 }
@@ -109,5 +118,107 @@ body {
 }
 
 .events th {
-    font-family: 'Poppins';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+.event-title, .events h6, .events p {
+    font-family: "Poppins";
+}
+
+
+/*Butoni back to top*/
+button#backToTopBtn {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px;
+    background-color:#8f859e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity,  0.3s ease-in-out;
+}
+
+button#backToTopBtn.show {
+    opacity: 1;
+}
+
+/*FOOTER*/
+footer{
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgb(243, 243, 243);
+    align-self: center;
+    width: 80vw;
+    font-family: "Poppins";
+}
+.footer-main{
+    display: flex;
+    flex-direction: grid;
+    justify-content: space-between;
+
+}
+.footer-main div{
+    margin: 20px;
+}
+.footer-copyright{
+    float: right;
+    color:rgb(155, 155, 155) ;
+    font-size: small;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    color: rgb(143, 133, 158);
+}
+.footer-weekendweekdays{
+    color: rgb(143, 133, 158);
+
+}
+.footer-newsletter-textfield{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+}
+.footer-newsletter-subscribebtn{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color:white;
+    background-color:rgb(143, 133, 158) ;
+    transition: transform 0.05s ease, background-color 0.5s ease;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+.footer-location-icon,.footer-call-icon{
+    height: 15px;
+    margin-right: 10px;
+}
+.footer-socials-icon{
+
+    margin: 5px;
+    height:35px;
+    width: 35px;
+}
+.footer-socials{
+    text-align: center;
+    margin-left: 15px;
+}
+.footer-socials-icon:hover{
+    transform: scale(1.05);
+}
+.footer-main-opening{
+
+    justify-content: left;
+}
+
+.footer-newsletter-subscribebtn:hover{
+    transform: scale(1.02);
+    background-color: rgb(152, 143, 165) ;
 }
