@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Home.css">
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script defer src="../assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <!--  -->
+    
     <script defer src="../js/Home.js"></script>
     <title>Spring Hotel &amp; Spa</title>
     
@@ -130,7 +130,58 @@
             </div>
         </section>
         
+            <footer>
+                <div class="row footer-main">
+                    <div class="col-md-3 footer-main-opening">
+                        <h2>Opening Hours</h2>
+                        <p><span class="footer-weekendweekdays">Weekdays:</span> 8:00 AM - 8:00 PM</p>
+                        <p><span class="footer-weekendweekdays">Weekends:</span> 9:00 AM - 6:00 PM</p>
+                    </div>
+                    <div class="col-md-3 footer-main-adress">
+                        <h2>Address</h2>
+                        <p><span><a href="#" target="_blank">
+                                    <address><img src="/assets\images\location.png" class="footer-location-icon">6036 Richmond Hwy,
+                                        Alexandria, VA 2230</address>
+                                </a></span></p>
+                        <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1
+                                (409) 987–5874</a></p>
+                    </div>
+                    <div class="col-md-3 footer-main-newsletter">
+                        <h2>Join our Newsletter</h2>
+                        <form>
+                            <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
+                            <button id="SubscribeBtn " class="footer-newsletter-subscribebtn"
+                                onclick="playAudio()">Subscribe</button>
+                            <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
+                            <script>
+                                // Get references to the button and audio element
+                                const subscribeButton = document.getElementById('SubscribeBtn');
+                                const subscribeAudio = document.getElementById('SubscribeAudio');
 
+                                // Add a function to play the audio
+                                function playAudio() {
+                                    // Play the audio when the button is clicked
+                                    subscribeAudio.play();
+                                };
+                            </script>
+                        </form>
+                    </div>
+            
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
+                            class="footer-socials-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
+                            class="footer-socials-icon"></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
+                            class="footer-socials-icon"></a>
+                </div>
+            
+                <div class="footer-copyright">
+                    &copy; Royal Villas. All Rights Reserved
+                </div>
+            
+            </footer>
 
 
 
@@ -139,7 +190,6 @@
     </div>
 
     <button id="backToTopBtn" title="Go to top" onclick="topFunciton()"><img width="30px" height="30px" style="display: flex; align-items: center; justify-content: center;" src="../assets/images/backToTop.png"/></button>
-
-
+    <audio id="backToTopSound" src="/assets\audio\whoosh.mp3" type="audio/mp3"></audio>
 </body>
 </html>
