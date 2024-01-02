@@ -16,10 +16,6 @@
         .slideImg{
             object-fit: contain;
         }
-
-        .carousel-inner{
-
-        }
     </style>
 </head>
 
@@ -38,7 +34,6 @@
         </ul>
     </header>
 
-  
         <section class="carousel-n-booking">
 
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="width: 60%;">
@@ -46,42 +41,42 @@
 
                     <div class="carousel-item active">
                         <img src="../assets/images/slide-01.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block ">
+                        <div class="carousel-caption d-none d-md-block " style="border-left: 3px solid white; padding-left: 40px;">
                             <h1 class="text-start">Your Ideal Retreat</h1>
                             <h4 class="text-start">Enjoy the world of relaxation</h4>
                             <h3 class="text-start">and tranquility!</h3>
-                            <a href="./About-Us.html" class="btn btn-outline-light">Learn More</a>
+                            <a href="./About-Us.html" class="btn btn-outline-light" style="float: left; margin-top: 10px;">Learn More</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img src="../assets/images/slide-02.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block ">
+                        <div class="carousel-caption d-none d-md-block " style=" border-left: 3px solid white; padding-left: 40px;">
                             <h1 class="text-start">Relax &amp; Unwind</h1>
                             <h4 class="text-start">Experience the luxurious level</h4>
                             <h3 class="text-start">of our spa treatments</h3>
-                            <a href="./About-Us.html" class="btn btn-outline-light">Learn More</a>
+                            <a href="./About-Us.html" class="btn btn-outline-light" style="float: left; margin-top: 10px;">Learn More</a>
                         </div>
                     
                     </div>
 
                     <div class="carousel-item">
                         <img src="../assets/images/slide-03.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block ">
+                        <div class="carousel-caption d-none d-md-block" style="border-left: 3px solid white; padding-left: 40px;">
                             <h1 class="text-start">Revitalize &amp; Relax</h1>
                             <h4 class="text-start">Indulge in our top-notch</h4>
                             <h3 class="text-start">spa resort</h3>
-                            <a class="text-start" href="./About-Us.html" class="btn btn-outline-light">Learn More</a>
+                            <a href="./About-Us.html" class="btn btn-outline-light" style="float: left; margin-top: 10px;">Learn More</a>
                         </div>    
                     </div>
                 </div>
             </div>
 
-            <div class="booking" ">
+            <div id="booking" ">
 
-                <h1>Book a Room</h1>
+                <h1 style="font-size: 30px;">Book a Room</h1>
 
-                <form style="display: flex; flex-direction: column;">
+                <form method="get" style="display: flex; flex-direction: column;">
 
                     <label class="text-uppercase" for="Full-Name">Your Full Name</label>
                     <input type="text" name="Full-Name" placeholder="Your Full Name..." required="true">
@@ -93,7 +88,7 @@
                     <input id="checkOutDate" type="date" name="Check-Out" placeholder="Check-Out Date..." required="true" onchange="validateDates()">
 
                     <label class="text-uppercase" for="Adults">Adults</label>
-                    <select name="Adults" required="true">
+                    <select name="Adults" required="true" id="adultsSelect" onchange="validateAdults()">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -102,21 +97,38 @@
                     </select>
 
                     <label class="text-uppercase" for="Children">Children</label>
-                    <select name="Children">
+                    <select name="Children" id="childrenSelect">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
 
-                    <button type="submit">Book Now</button>
+                    <button id="formBtn" class="btn btn-primary" type="submit">Book Now</button>
                 </form>
-
             </div>
-
 
         </section>
 
+        <section class="abt-us-home">
+            <div>
+                <video src="https://youtu.be/yovEatOurPc" type="video/mp4"></video>
+            </div>
+
+            <div style="background-color: #8f859e;">
+                <h1>About Us</h1>
+                <p>Committed to everyone seeking energy and excitement, we offer endless possibilities to unwind and reenergize.</p>
+                <div>
+                    <p>Weekdays: </p>
+                    <p>8:00 - 20:00</p>
+                </div>
+                <div>
+                    <p>Weekends: </p>   
+                    <p>9:00 - 18:00</p>
+                </div>
+                <button class="btn btn-outline-light" onclick="scrollToElement()">Book Now</button>
+            </div>
+        </section>
         
 
 
