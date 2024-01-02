@@ -280,6 +280,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     display: none;
+    padding-left: 2px;
 }
 
 .social-icons a {
