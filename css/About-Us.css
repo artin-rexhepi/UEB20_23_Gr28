@@ -347,7 +347,7 @@ footer a:hover{
 }
 .footer-newsletter-textfield{
     padding: 10px;
-    
+    margin: 5px;
     border: none;
 }
 .footer-newsletter-subscribebtn{
@@ -357,6 +357,9 @@ footer a:hover{
     color:white;
     background-color:rgb(143, 133, 158) ;
     transition: transform 0.05s ease, background-color 0.5s ease;
+    margin: 5px;
+    border-radius: 5px;
+
 }
 .footer-location-icon,.footer-call-icon{
     height: 15px;
@@ -383,7 +386,6 @@ footer a:hover{
 .footer-newsletter-subscribebtn:hover{
     transform: scale(1.02);
     background-color: rgb(152, 143, 165) ;
-
 }
 
 button#backToTopBtn {

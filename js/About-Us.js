@@ -60,6 +60,14 @@ const reviewsData = [
             currentIndex = index;
         }
 
+        //Ndryshim automatik i reviewers
+        function startReviewRotation() {
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % reviewsData.length;
+                showReview(nextIndex);
+            }, 15000); // Ndrysho review pas 15 sekondave ne menyre automatike
+        }
+
         function initializeReviews() {
             reviewsData.forEach((review, index) => {
                 const card = createReviewCard(review, index);
@@ -70,6 +78,7 @@ const reviewsData = [
             reviewsContainer.appendChild(profilePictures);
 
             showReview(0);
+            startReviewRotation();
         }
 
         initializeReviews();
