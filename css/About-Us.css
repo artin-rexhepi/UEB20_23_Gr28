@@ -283,6 +283,10 @@ body{
     padding-left: 2px;
 }
 
+.social-icons img {
+    margin: 2px;
+}
+
 .social-icons a {
     display: inline-block;
     margin: 0 0.5vw;
