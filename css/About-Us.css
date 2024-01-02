@@ -43,6 +43,9 @@ body{
 
 .navbar ul{
     display: flex;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -63,6 +66,7 @@ body{
     font-family: Poppins;
     color: #8f859e;
 }
+
 
 .header{
     display: flex;
