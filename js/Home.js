@@ -30,59 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 });
 
-
- 
-// -------------------------- Reveal on scrolli --------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
-    const scrollInText = document.getElementById("myScrollInText");
-
-    // Check whether the text is in view when the page loads
-    checkScroll();
-
-    // Add event listener for scroll events
-    window.addEventListener("scroll", () => {
-        checkScroll();
-    });
-
-    function checkScroll() {
-        // Get the position of the text element
-        const elementPosition = scrollInText.getBoundingClientRect();
-
-        // Check if the top and bottom of the element are in view
-        const inView = (elementPosition.top >= 0 && elementPosition.bottom <= window.innerHeight);
-
-        if (inView) {
-            scrollInText.classList.add("show");
-        } else {
-            scrollInText.classList.remove("show");
-        }
-    }
-});
-
-
-
-
-// -------------------------- Slide-in text prej karusel --------------------------
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all elements with the class 'slide-in'
-    const slideInElements = document.querySelectorAll('.slide-in');
-
-    // Function to trigger the slide-in effect
-    const slideIn = (element) => {
-      element.style.opacity = 1;
-      element.style.transform = 'translateX(0)';
-    };
-
-    // Iterate over each slide-in element and trigger the effect
-    slideInElements.forEach((element) => {
-      slideIn(element);
-    });
-  });
-
-
-
-// -------------------------- Validimi i datave per form --------------------------
+// -------------------------- Validimi i formes per rezervim --------------------------
 function validateDates() {
     // Merr vlerat e check-in dhe check-out
     let checkInDate = new Date(document.getElementById('checkInDate').value);
@@ -126,3 +74,23 @@ function validateDates() {
     }
 
 }
+
+const validateAdults = () => {
+    const adultsSelect = document.getElementById('adultsSelect');
+    const adultsValue = parseInt(adultsSelect.value, 10); // e konverton ne numer te sistemit decimal.
+
+    if(adultsValue === 0){
+        alert("Invalid number of recipients.");
+        adultsSelect.value= "";
+    }
+};
+
+// -------------------------- Butoni qe ridirekton tek booking form --------------------------
+const scrollToElement = () => {
+    const destinacioniElement = document.getElementById('booking');
+
+    if (destinacioniElement) {
+        console.log('Scrolling to destinacioni');
+        destinacioniElement.scrollIntoView({ behavior: 'smooth' });
+    }
+};
