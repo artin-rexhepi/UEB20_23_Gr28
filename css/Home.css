@@ -36,7 +36,8 @@ body{
 
 .navbar{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     width: 90%;
     margin: 0 auto;
@@ -46,10 +47,14 @@ body{
     font-family: "Poppins";
 }
 
+.navbar img {
+    margin: 0 10px;
+}
+
 .navbar ul{
     display: flex;
-    width: 100%;
-    margin: 20px 0;
+    width: 80%;
+    margin: 20px 0px;
     padding: 0;
     justify-content: center;
     align-items: center;
