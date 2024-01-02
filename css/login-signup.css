@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: 'Poppins';
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
 body {
     --color-primary: #8F859E;
     --color-primary-dark: #dcd1d5;
@@ -40,7 +44,7 @@ body {
 .container,
 .form-input,
 .form-button{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins';
 }
 
 .form-hidden{
@@ -116,6 +120,7 @@ body {
     outline: none;
     cursor: poiner;
     background: var(--color-primary);
+    transition: all ease-in 0.3s;
 }
 
 .form-button:hover{
