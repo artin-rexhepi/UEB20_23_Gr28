@@ -117,30 +117,42 @@ body{
     list-style-type: square;
     color: rgb(143, 133, 158);
     font-size: large;
-    margin: 5vh;
+    margin: 50px auto;
+    width: 80%;
 
 }
-.faq-list {
-    list-style: none;
-    padding: 0;
-    list-style-type: disc;
-    color: rgb(70, 70, 70);
+
+/* Style the list item */
+li {
+    margin-bottom: 20px;
 }
 
+/* Style the question */
 .question {
-    cursor: pointer;
+    list-style-type: disc;
     font-weight: bold;
-    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid rgb(152, 143, 165);
+    border-radius: 5px;
 }
 
+/* Style the answer (initially hidden) */
 .answer {
     display: none;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.question:hover {
-    text-decoration: underline;
+/* Show the answer when the question is hovered */
+.question:checked + .answer {
+    display: block;
+    
 }
+
 footer {
     margin: 20px auto;
     padding: 15px;

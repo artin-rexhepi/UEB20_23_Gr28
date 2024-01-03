@@ -166,7 +166,11 @@ body{
 }
 
 .reviews-main {
-    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.8vw;
     padding-top: 6px;
     padding-bottom: 80px;
     text-align: center;
@@ -174,6 +178,7 @@ body{
     color: white;
     margin: 40px 0;
     font-family: "Poppins";
+    height: 600px;
 }
 
 .reviews-container {
@@ -185,7 +190,7 @@ body{
 }
 
 .review-card {
-    padding: 8px;
+    padding: 10px;
     text-align: center;
     border: 1px solid rgb(50, 50, 50);
 }
@@ -196,8 +201,8 @@ body{
 }
 
 .profile-picture-small {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin: 6px 20px;
     object-fit: cover;
@@ -223,14 +228,14 @@ body{
 
 .review-text {
     font-weight: lighter;
-    font-size: 0.8vw;
+    font-size: 1vw;
     max-width: 30vw;
     margin: auto;
 }
 
 .review-title {
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
 }
 
 .team-main {
@@ -352,8 +357,9 @@ footer a:hover{
 
 }
 .footer-newsletter-textfield{
-    padding: 10px;
-    margin: 5px;
+    width: 90%;
+    padding: 1vw;
+    margin: 0.5vw;
     border: none;
 }
 .footer-newsletter-subscribebtn{
