@@ -20,6 +20,12 @@ body {
     color: white;
 }
 
+.promoters .posts {
+    width: 90%;
+    margin: 10px auto;
+}
+
+
 
 /*NAVBARI*/
 .logoja{
@@ -152,7 +158,7 @@ footer{
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
-    width: 80vw;
+    width: 87%;
     font-family: "Poppins";
 }
 .footer-main{
