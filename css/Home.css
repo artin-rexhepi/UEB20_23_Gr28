@@ -12,7 +12,7 @@
 
 body{
    width: 100%;
-   height: 200vh;
+   height: 100%;
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -36,8 +36,7 @@ body{
 
 .navbar{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 90%;
     margin: 0 auto;
@@ -47,14 +46,10 @@ body{
     font-family: "Poppins";
 }
 
-.navbar img {
-    margin: 0 10px;
-}
-
 .navbar ul{
     display: flex;
-    width: 80%;
-    margin: 20px 0px;
+    width: 100%;
+    margin: 20px 0;
     padding: 0;
     justify-content: center;
     align-items: center;
@@ -66,6 +61,7 @@ body{
 }
 
 .navbar a{
+    font-family: "Poppins";
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -73,7 +69,10 @@ body{
 }
 
 .navbar a:hover{
-    font-family: Poppins;
+    color: #8f859e;
+}
+
+.navbar a:focus{
     color: #8f859e;
 }
 
@@ -109,7 +108,7 @@ button#backToTopBtn.show {
 .carousel-n-booking{
     display: flex;
     width: 90%;
-    margin: 30px auto;
+    margin: 100px auto;
 }
 
 #booking{
@@ -137,7 +136,141 @@ button#formBtn:hover{
     border-color: #8f859e;
     color: white;
 }
-footer {
+
+.abt-us-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 500px;
+    margin: 100px auto;
+    font-family: "Poppins";
+    color: #fff;
+}
+
+.abt-us-home video{
+    width: auto;
+    height: auto;
+}
+
+.abt-us-text{
+    display: flex;
+    width: 50%;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-us-video{
+    height: 100%;
+    width: 85%;
+}
+
+.abt-us-video img{
+    height: 100%;
+    width: inherit;
+    object-fit: cover;
+}
+
+
+
+.abt-us-text h1{
+   width: 80%;
+   margin: 20px 0;
+   padding: 0 20px;
+}
+
+.abt-us-text p{
+    width: 80%;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.abt-us-text .schedule-home{
+display: flex;
+flex-direction: column;
+width: 80%;
+margin: 20px 0;
+padding: 0;
+}
+
+.pool-section{
+display: flex;
+width: 100%;
+height: 500px;
+margin: 100px auto;
+background-color: #f3f3f3;
+font-family: "Poppins";
+}
+
+.pool-section .formating-div{
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 100%;
+width: 90%;
+margin: 0 auto;
+}
+
+.pool-section .pool-text p{
+margin: 20px 0;
+width: 80%;
+font-size: 15px;
+color: #9c9c9c
+}
+
+.pool-section .pool-text #poolBtn{
+padding: 12px 32px;
+background-color: #8f859e;
+border-color: #8f859e;
+color: #fff;
+transition: all ease-in 0.3s;
+}
+
+.pool-section .pool-text #poolBtn:hover{
+background-color: transparent;
+color: #8f859e;
+}
+
+
+
+.pool-section .pool-container img{
+object-fit: cover;
+}
+
+
+
+
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 100px auto;
+}
+
+.blog h1{
+    width: 100%;
+    border-bottom: 1px solid #8f859e;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.card-body .card-text{
+    text-align: left;
+    margin-top: 70px;
+    padding-top: 20px;
+    border-top: 1px solid #8f859e;
+    
+}
+
+
+footer{
     margin: 20px auto;
     padding: 15px;
     background-color: rgb(243, 243, 243);
@@ -145,82 +278,68 @@ footer {
     width: 80vw;
     font-family: "Poppins";
 }
-
-.footer-main {
+.footer-main{
     display: flex;
     flex-direction: grid;
     justify-content: space-between;
 
 }
-
-.footer-main div {
+.footer-main div{
     margin: 20px;
 }
-
-.footer-copyright {
+.footer-copyright{
     float: right;
-    color: rgb(155, 155, 155);
+    color:rgb(155, 155, 155) ;
     font-size: small;
 }
-
-footer a {
+footer a{
     text-decoration: none;
     color: black;
 }
-
-footer a:hover {
+footer a:hover{
     color: rgb(143, 133, 158);
 }
-
-.footer-weekendweekdays {
+.footer-weekendweekdays{
     color: rgb(143, 133, 158);
 
 }
-
-.footer-newsletter-textfield {
+.footer-newsletter-textfield{
     padding: 10px;
-
+    
     border: none;
 }
-
-.footer-newsletter-subscribebtn {
+.footer-newsletter-subscribebtn{
     padding: 10px;
     width: 100px;
     border: none;
-    color: white;
-    background-color: rgb(143, 133, 158);
+    color:white;
+    background-color:rgb(143, 133, 158) ;
     transition: transform 0.05s ease, background-color 0.5s ease;
 }
-
-.footer-location-icon,
-.footer-call-icon {
+.footer-location-icon,.footer-call-icon{
     height: 15px;
     margin-right: 10px;
 }
-
-.footer-socials-icon {
+.footer-socials-icon{
 
     margin: 5px;
-    height: 35px;
+    height:35px;
     width: 35px;
 }
-
-.footer-socials {
+.footer-socials{
     text-align: center;
     margin-left: 15px;
 }
-
-.footer-socials-icon:hover {
+.footer-socials-icon:hover{
     transform: scale(1.05);
 }
-
-.footer-main-opening {
+.footer-main-opening{
 
     justify-content: left;
 }
 
-.footer-newsletter-subscribebtn:hover {
+.footer-newsletter-subscribebtn:hover{
     transform: scale(1.02);
-    background-color: rgb(152, 143, 165);
+    background-color: rgb(152, 143, 165) ;
 
 }
