@@ -182,11 +182,16 @@ body{
 }
 
 .reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: rgb(50, 50, 50);
-    width: 50vw;
+    width: 53vw;
+    height: 27vw;
     margin: 10px auto;
     overflow: hidden;
-    box-shadow: -4px -4px 1px rgb(143, 133, 158);
+    box-shadow: -8px -8px 3px rgb(143, 133, 158);
 }
 
 .review-card {
@@ -201,8 +206,8 @@ body{
 }
 
 .profile-picture-small {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin: 6px 20px;
     object-fit: cover;
