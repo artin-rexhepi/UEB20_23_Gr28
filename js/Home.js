@@ -1,10 +1,12 @@
 
-        // -------------------------- Butoni back to top --------------------------
+
+// -------------------------- Butoni back to top --------------------------
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Get the button
+    // Merr butonin
     const mybutton = document.getElementById("backToTopBtn");
-    const buttonAudio = document.getElementById('backToTopSound')
-    // When the user scrolls down 90px from the top of the document, show the button
+
+    // Kur useri ben scroll poshte per 500 px, te shfaqet butoni
     window.onscroll = () => scrollFunction();
 
     const scrollFunction = () => {
@@ -16,12 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // When the user clicks on the button, scroll to the top of the document
+    // Kur useri klikon ne buton, dergoje lart ne faqe
     mybutton.addEventListener("click", () => topFunction());
 
     const topFunction = () => {
-        // Smooth scroll to the top
-        buttonAudio.play();
+        // Smooth scroll ne top
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -76,9 +77,9 @@ function validateDates() {
 
 const validateAdults = () => {
     const adultsSelect = document.getElementById('adultsSelect');
-    const adultsValue = parseInt(adultsSelect.value, 10); // e konverton ne numer te sistemit decimal.
+    const adultsValue = adultsSelect.value; // e konverton ne numer te sistemit decimal.
 
-    if(adultsValue === 0){
+    if(adultsValue === "0"){
         alert("Invalid number of recipients.");
         adultsSelect.value= "";
     }
@@ -93,3 +94,4 @@ const scrollToElement = () => {
         destinacioniElement.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
