@@ -1,12 +1,11 @@
 
 
-// -------------------------- Butoni back to top --------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
+   // -------------------------- Butoni back to top --------------------------
+   document.addEventListener("DOMContentLoaded", () => {
     // Merr butonin
     const mybutton = document.getElementById("backToTopBtn");
-
-    // Kur useri ben scroll poshte per 500 px, te shfaqet butoni
+    const buttonAudio = document.getElementById('backToTopSound')
+    // Kur perdoruesi scroll poshte 500px, atehere shfaqe butonin
     window.onscroll = () => scrollFunction();
 
     const scrollFunction = () => {
@@ -18,11 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Kur useri klikon ne buton, dergoje lart ne faqe
+    // Kur useri klikon butonin, ktheje ne top te faqes
     mybutton.addEventListener("click", () => topFunction());
 
     const topFunction = () => {
-        // Smooth scroll ne top
+        // Scrolli per ne top te behet ne menyre te bute dhe njekohesisht te luhet audio mp3
+        buttonAudio.play();
         window.scrollTo({
             top: 0,
             behavior: "smooth"
