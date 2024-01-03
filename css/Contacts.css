@@ -1,0 +1,128 @@
+*{
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: 30px 0;
+    height: 300px;
+    width: 100%;
+    background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
+    color: white;
+    font-family: "Poppins";
+}
+
+.contacts h1{
+    font-family: Poppins;
+    font-size: 60px;
+    margin: 0;
+}
+
+.contacts a{
+    font-family: "Poppins";
+    color: #dfdfdf;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+
+.contacts a:hover{
+    color: white;
+}
+
+.contacts p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.components{
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+
+.shell{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+
+.form{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#h2{
+    font-size: 60px;
+    color: black;
+}
+
+#pg{
+    color: #fbfbfb;
+}
+
+form{
+    display: block;
+}
+
+.form input[type=text]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    height: 55px;
+    color: #000;
+    border: none;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+.form input[type=number]{
+    width: 30%;
+    height: 55px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: #000;
+    border: none;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    resize: none;
+}
+
+.form input[type=email]{
+    width: 30%;
+    height: 55px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: #000;
+    border: none;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+.form input[type=submit]{
+    width: 15%;
+    height: 55px;
+    background-color: #0476aa;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 8px 0px;
+    cursor: pointer;
+}
