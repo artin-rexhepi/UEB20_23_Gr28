@@ -80,6 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
         validateForm();
     });
 
+    passwordInput.addEventListener("blur", (e) => {
+        if (e.target.value.length > 0 && e.target.value.length < 8) {
+            setInputError(passwordInput, "Password must be at least 8 characters");
+        } else {
+            clearInputError(passwordInput);
+        }
+
+        validateForm();
+    });
+
     emailInput.addEventListener("blur", (e) => {
         const emailValue = e.target.value.trim();
         if (!emailValue.includes('@')) {
