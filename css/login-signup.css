@@ -46,6 +46,17 @@ body {
     font-family: 'Poppins';
 }
 
+.logoja {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.logoja img{
+    width: 200px;
+    height: 90px;
+    object-fit: cover;
+}
 .form-hidden{
     display: none;
 }

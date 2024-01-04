@@ -146,6 +146,7 @@ button#backToTopBtn.show {
     outline: none;
     background: #ffffff;
     transition: background 0.2s, border-color 0.2s;
+    color: #9c9c9c;
 }
 
 button#formBtn{
