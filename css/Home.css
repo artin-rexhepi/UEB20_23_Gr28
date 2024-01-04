@@ -160,8 +160,11 @@ button#backToTopBtn.show {
 
 .carousel-n-booking{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 90%;
-    margin: 100px auto;
+    height: 500px;
+    margin: 50px auto;
 }
 
 
@@ -171,13 +174,14 @@ button#backToTopBtn.show {
     align-items: center;
     justify-content: center;
     width: 30%;
+    height: inherit;
     margin: 0 auto;
-    margin-top: -40px;
     background-color: #e3e3e3;
     font-family: "Poppins";
 }
 
 .booking-form {
+    height: inherit;
     width: 90%;
     box-sizing: border-box;
     padding: 2px;

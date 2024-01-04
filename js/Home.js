@@ -41,12 +41,12 @@ function validateDates() {
 
     // Data minimale kur mund te kryhet nje check-in eshte nje jave nga data aktuale
     let minCheckInDate = new Date(currentDate);
-    minCheckInDate.setDate(currentDate.getDate() + 7);
+    minCheckInDate.setDate(currentDate.getDate() + 6);
 
-    // Rezervuesi duhet te rrije se paku dy dite qe te mund te bej check-out
-    // Pra data minimale kur mund te bej check-out eshte 2 dite pasi ka bere check-in
+    // Rezervuesi duhet te rrije se paku nje dite qe te mund te bej check-out
+    // Pra data minimale kur mund te bej check-out eshte 1 dite pasi ka bere check-in
     let minCheckOutDate = new Date(checkInDate);
-    minCheckOutDate.setDate(checkInDate.getDate() + 2);
+    minCheckOutDate.setDate(checkInDate.getDate() + 1);
 
     // Validimi i dates se check-in
     if (checkInDate < currentDate || checkInDate < minCheckInDate) {
@@ -56,7 +56,7 @@ function validateDates() {
 
     // Validimi i dates se check-out
     if (checkOutDate < minCheckOutDate) {
-        alert("Invalid check-out date. Must be at least 2 days from the check-in date.");
+        alert("Invalid check-out date. Must be at least a day from the check-in date.");
         document.getElementById('checkOutDate').value = "";
     }
 
