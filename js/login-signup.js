@@ -158,3 +158,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+function openPopup() {
+    document.getElementById('termsPopup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('termsPopup').style.display = 'none';
+}
