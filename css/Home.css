@@ -18,11 +18,22 @@ body{
    box-sizing: border-box;
 }
 
+
+
 .logoja{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
+}
+
+@media screen and (max-width: 576px) {
+   .logoja{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+   }
 }
 
 .logoja img{
@@ -31,6 +42,16 @@ body{
     object-fit: cover;
     padding: 0;
     margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+   .logoja img{
+        width: 150px;
+        height: 75px;
+        object-fit: cover;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 
@@ -46,6 +67,33 @@ body{
     border-bottom: 1px solid #a3a3a3;
     font-family: "Poppins";
 }
+
+@media screen and (max-width: 576px) {
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        background-color: white;
+        border-top: 1px solid #a3a3a3 ;
+        border-bottom: 1px solid #a3a3a3;
+        font-family: "Poppins";
+    }
+ }
+
+ .navbar #topMenuTrigger{
+   display: none;
+ }
+
+ @media screen and (max-width: 576px) {
+    .navbar #topMenuTrigger{
+        display: flex;
+        background-color: none;
+      }
+ }
+
 
 .navbar img{
     margin: 0 10px;
@@ -293,7 +341,7 @@ object-fit: cover;
     margin-top: 70px;
     padding-top: 20px;
     border-top: 1px solid #8f859e;
-    
+        
 }
 
 
