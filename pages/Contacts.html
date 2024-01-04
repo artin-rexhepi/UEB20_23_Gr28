@@ -47,9 +47,9 @@
         <input type="text" id="name" placeholder="Your name">
         <input type="number" name="numbers" id="phone" placeholder="Phone"><br>
         <textarea name="coment" id="textarea" cols="30" rows="10" placeholder="Your message"></textarea><br>
-        <input type="email" name="mail" id="email" placeholder="E-mail">
-        <input type="submit" value="send message" >
-        
+        <div class="form-email-send"><input type="email" name="mail" id="email" placeholder="E-mail">
+        <input type="submit" value="Send " class="send-msg-button" >
+        </div>
     </form>
     
     </div>
@@ -60,19 +60,19 @@
             <p>Get Social</p>
             <hr></hr>
             <ul>
-                <li><a href="#"><img src="../assets/images/ig.png" alt=""></a></li>
-                <li><a href="#"><img src="../assets/images/fb.png" alt=""></a></li>
-                <li><a href="#"><img src="../assets/images/tw.png" alt=""></a></li>
-                <li><a href="#"><img src="../assets/images/yt.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com"><img src="../assets/images/instagram.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com"><img src="../assets/images/facebook.png" alt=""></a></li>
+                <li><a href="https://www.twitter.com"><img src="../assets/images/twitter.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com"><img src="../assets/images/youtube.png" alt="" style="height: 35px; height: 35px;"></a></li>
             </ul>
         </div>
 
     <div class="phone">
         <p>Phone</p>
-        <hr></hr>
+        <hr style="width: 100%;"></hr>
         <ul>
-            <li><img src="../assets/images/phone.png" alt=""></li>
-            <li><a href="#">1-800-1234-567</a></li>
+            <li><img src="../assets/images/call.png" alt=""></li>
+            <li><a href="tel:+1 (409) 987–5874">+1 (409) 987–5874</a></li>
         </ul>
 
     </div>
@@ -83,7 +83,7 @@
             <hr></hr>
             <ul>
                 <li><img src="../assets/images/location.png" alt=""></li>
-                <li><a href="#">267 Park Avenue New York, NY 90210</a></li>
+                <li><a href="#">6036 Richmond Hwy, Alexandria, VA 2230</a></li>
             </ul>
         
     </div>
@@ -102,56 +102,58 @@
 </div>
 </div>
 
-<footer>
-    <div class="row footer-main">
-        <div class="col-md-3 footer-main-opening">
-            <h2>Opening Hours</h2>
-                <p><span class="footer-weekendweekdays">Weekdays:</span> 8:00 AM - 8:00 PM</p>
-                <p><span class="footer-weekendweekdays">Weekends:</span> 9:00 AM - 6:00 PM</p>
-        </div>
-        <div class="col-md-3 footer-main-adress">
-            <h2 >Address</h2>
-                <p><span><a href="#"
-                            target="_blank">
-                            <address><img src="/assets\images\location.png" class="footer-location-icon">6036 Richmond Hwy, Alexandria, VA 2230</address>
-                        </a></span></p>
-                <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1 (409) 987–5874</a></p>
-        </div>
-        <div class="col-md-3 footer-main-newsletter">
-            <h2>Join our Newsletter</h2>
-            <form>
-                <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
-                <button  id= "SubscribeBtn "class="footer-newsletter-subscribebtn" onclick="playAudio()">Subscribe</button>
-                <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
-                <script>
-                    // Get references to the button and audio element
-                    const subscribeButton = document.getElementById('SubscribeBtn');
-                    const subscribeAudio = document.getElementById('SubscribeAudio');
+    <footer>
+        <div class="row footer-main">
+            <div class="col-md-3 footer-main-opening">
+                <h2>Opening Hours</h2>
+                    <p><span class="footer-weekendweekdays">Weekdays:</span> 8:00 AM - 8:00 PM</p>
+                    <p><span class="footer-weekendweekdays">Weekends:</span> 9:00 AM - 6:00 PM</p>
+            </div>
+            <div class="col-md-3 footer-main-adress">
+                <h2 >Address</h2>
+                    <p><span><a href="https://www.google.com/maps/search/6036+Richmond+Hwy,+Alexandria,+VA+2230/@38.7860603,-77.0740174,16.25z?entry=ttu"
+                                target="_blank">
+                                <address style="margin: 0;"><img src="/assets\images\location.png" class="footer-location-icon">6036 Richmond Hwy, Alexandria, VA 2230</address>
+                            </a></span></p>
+                    
+                    <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1 (409) 987–5874</a></p>
+                    <a href="mailto:spring@hotel.com"><img src="/assets/images/email.png" class="footer-call-icon">spring@hotel.com</a>
+            </div>
+            <div class="col-md-3 footer-main-newsletter">
+                <h2>Join our Newsletter</h2>
+                <form>
+                    <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
+                    <button  id= "SubscribeBtn "class="footer-newsletter-subscribebtn" onclick="playAudio()">Subscribe</button>
+                    <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
+                    <script>
+                        // Get references to the button and audio element
+                        const subscribeButton = document.getElementById('SubscribeBtn');
+                        const subscribeAudio = document.getElementById('SubscribeAudio');
 
-                    // Add a function to play the audio
-                    function playAudio() {
-                        // Play the audio when the button is clicked
-                        subscribeAudio.play();
-                    };
-                </script>
-            </form>
+                        // Add a function to play the audio
+                        function playAudio() {
+                            // Play the audio when the button is clicked
+                            subscribeAudio.play();
+                        };
+                    </script>
+                </form>
+            </div>
+            
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
+                    class="footer-socials-icon"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
+                    class="footer-socials-icon"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
+                    class="footer-socials-icon"></a>
         </div>
         
-    </div>
-    <div class="footer-socials">
-        <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
-                class="footer-socials-icon"></a>
-        <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
-                class="footer-socials-icon"></a>
-        <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
-                class="footer-socials-icon"></a>
-    </div>
-    
-    <div class="footer-copyright">
-        &copy; Royal Villas. All Rights Reserved
-    </div>
-    
-</footer>
+        <div class="footer-copyright">
+            &copy; Spring Hotel. All Rights Reserved
+        </div>
+        
+    </footer>
 </section>
 </body>
 </html>

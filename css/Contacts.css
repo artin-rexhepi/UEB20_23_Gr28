@@ -114,8 +114,9 @@
 }
 
 .form{
-    width: 70%;
+    width: 60%;
     height: 100%;
+    margin: 15px auto;
     padding-left: 10px;
     padding-right: 10px;
     display: block;
@@ -137,7 +138,7 @@
 }
 
 .form input[type=text]{
-    width: 30%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     height: 55px;
@@ -147,7 +148,7 @@
     background-color: #f1f1f1;
 }
 .form input[type=number]{
-    width: 30%;
+    width: 40%;
     height: 55px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -157,7 +158,7 @@
     background-color: #f1f1f1;
 }
 textarea {
-    width: 60%;
+    width: 80%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -169,40 +170,56 @@ textarea {
 }
 
 .form input[type=email]{
-    width: 30%;
+    width: 60%;
     height: 55px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-right: 6px;
     color: #000;
     border: none;
     box-sizing: border-box;
     background-color: #f1f1f1;
 }
 .form input[type=submit]{
-    width: 15%;
-    height: 55px;
-    background-color: #0476aa;
+    padding: 8px;
+    width: 20%;
+    height: 53px;
     border: none;
     color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    margin: 8px 0px;
-    cursor: pointer;
+    background-color: rgb(143, 133, 158);
+    transition: transform 0.05s ease, background-color 0.5s ease;
+
+    border-radius: 5px;
 }
 .form input[type=submit]:hover{
-    color: #054766;
-    background-color: #7abedd;
+    transform: scale(1.02);
+    background-color: rgb(152, 143, 165);
 }
-
+.form-email-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 .elemets{
+    padding-top: 25px;
     font-size: 16px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.social, .phone, .addres, .opening{
+
+        width: 70%;
 }
 .social ul{
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start ;
     flex-direction:row;
-    
+    padding: 0;
+
 }
 .social ul li{
     list-style: none;
@@ -211,7 +228,7 @@ textarea {
 }
 .social ul li a img{
     display: inline-block;
-    margin: 5px 0;
+
     width: 25px;
     height: 25px;
 }
@@ -220,6 +237,7 @@ textarea {
     display: flex;
     align-items: center;
     flex-direction:row;
+    padding: 0;
 }
 .phone ul li{
     list-style: none;
@@ -228,7 +246,7 @@ textarea {
 }
 .phone ul li img{
     display: inline;
-    margin: 5px 0;
+
     width: 25px;
     height: 25px;
 }
@@ -239,13 +257,14 @@ textarea {
     transition: all ease-in 0.2s;
 }
 .phone ul li a:hover{
-    color: #adadad;
+    color: #8F859E;
 }
 .addres ul{
     position: relative;
     display: flex;
     align-items: center;
     flex-direction:row;
+    padding: 0;
 }
 .addres ul li{
     list-style: none;
@@ -254,7 +273,7 @@ textarea {
 }
 .addres ul li img{
     display: inline;
-    margin: 5px 0;
+
     width: 25px;
     height: 25px;
 }
@@ -265,13 +284,14 @@ textarea {
     transition: all ease-in 0.2s;
 }
 .addres ul li a:hover{
-    color: #adadad;
+    color: #8F859E;
 }
 .opening ul{
     position: relative;
     display: flex;
     align-items: center;
     flex-direction:row;
+    padding: 0;
 }
 .opening ul li{
     list-style: none;
@@ -280,7 +300,6 @@ textarea {
 }
 .opening ul li img{
     display: inline;
-    margin: 5px 0;
     width: 25px;
     height: 25px;
 }
@@ -290,6 +309,10 @@ textarea {
     text-decoration: none;
     transition: all ease-in 0.2s;
 }
+
+
+
+
 
 footer{
     margin: 20px auto;

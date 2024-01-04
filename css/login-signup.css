@@ -233,10 +233,10 @@ body {
     height: 80%;
 }
 
-.close-btn {
+.close-btn img{
     cursor: pointer;
-    justify-content: right;
-    align-items: center;
+    justify-content:  right;
+
 }
 #terms-download{
     padding: 6px;
@@ -248,7 +248,7 @@ body {
 }
 #terms-download:hover{
     background-color: var(--color-primary);
-    color:black;
+    color:white;
 }
 .terms-text{
     font-size: 1rem;
@@ -261,4 +261,7 @@ body {
 }
 .popup-title{
     margin: 0;
+}
+mark{
+    background-color: #a59db2;
 }

@@ -116,17 +116,16 @@ const reviewsData = [
 
             
 
-            const socialIcons = document.createElement('div');
+            const socialIcons = document.createElement('a');
             socialIcons.classList.add('social-icons');
 
             // Create social icons
             for (const platform in member.social) {
                 const iconImg = document.createElement('img');
                 iconImg.src = member.social[platform];
-                iconImg.alt = platform;
+ 
                 socialIcons.appendChild(iconImg);
             }
-
             infoContainer.appendChild(name);
             
             infoContainer.appendChild(title);

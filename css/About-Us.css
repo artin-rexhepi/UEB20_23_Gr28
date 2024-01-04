@@ -380,7 +380,7 @@ footer a:hover{
 }
 .footer-location-icon,.footer-call-icon{
     height: 15px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 .footer-socials-icon{
 
@@ -423,3 +423,4 @@ button#backToTopBtn {
 button#backToTopBtn.show {
     opacity: 1;
 }
+
