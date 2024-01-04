@@ -124,6 +124,7 @@ button#backToTopBtn.show {
     justify-content: center;
     width: 30%;
     margin: 0 auto;
+    margin-top: -40px;
     background-color: #e3e3e3;
     font-family: "Poppins";
 }
@@ -131,6 +132,8 @@ button#backToTopBtn.show {
 .booking-form {
     width: 90%;
     box-sizing: border-box;
+    padding: 2px;
+    
 }
 
 .form-input {
