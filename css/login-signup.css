@@ -67,7 +67,8 @@ body {
 }
 
 .form-title{
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2px;
     text-align: center;
 }
 
@@ -165,4 +166,39 @@ body {
 .form-button.form-button-disabled:hover {
     background: var(--color-primary-dark);
     /* Adjust the hover effect for disabled button as needed */
+}
+
+.human-verification {
+    margin: 0px;
+}
+
+.human-verification p{
+    margin: 0px;
+    margin-bottom: 0.5rem;
+}
+.drop-zone {
+    border: 2px dashed #000; /* Change the border properties as needed */
+    border-radius: 60%;
+    width: 2rem; /* Adjust the height as per your design */
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2px; /* Adjust the margin as needed */
+}
+
+.figure-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    
+}
+
+.draggable-figure {
+    display: flex;
+    align-items: flex-end;
+}
+
+.verification-result {
+    margin-top: 0px;
+
 }

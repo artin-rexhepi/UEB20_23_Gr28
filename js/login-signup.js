@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupUsername = document.querySelector("#signupUsername");
     const emailInput = document.querySelector("#createAccount input[type='email']");
     const formInputs = document.querySelectorAll("#createAccount input[type='text'], #createAccount input[type='password'], #termsCheckbox");
+    
 
 
     //kY VALIDIM ESHTE I THJESHT
@@ -133,7 +134,27 @@ document.addEventListener("DOMContentLoaded", () => {
     termsCheckbox.addEventListener("change", validateForm);
     passwordInput.addEventListener("input", checkPasswordsMatch);
     confirmPasswordInput.addEventListener("input", checkPasswordsMatch);
-
     validateForm();
 
+    const dropZone = document.getElementById('dropZone');
+    const verificationResult = document.getElementById('verificationResult');
+    const draggableImage = document.getElementById('draggable-image')
+
+    draggableImage.addEventListener('dragstart', function (e) {
+        e.dataTransfer.setData('text/plain', this.id);
+    });
+
+    dropZone.addEventListener('dragover', function (e) {
+        e.preventDefault();
+    });
+
+    dropZone.addEventListener('drop', function (e) {
+        e.preventDefault();
+        const data = e.dataTransfer.getData('text/plain');
+        const draggedElement = document.getElementById(data);
+        if (draggedElement === draggableImage) {
+            this.appendChild(draggedElement); // Append the draggableFigure to dropZone
+            verificationResult.textContent = 'You are human!';
+        }
+    });
 });
