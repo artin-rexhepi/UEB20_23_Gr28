@@ -115,23 +115,23 @@
                 </div>
             </div>
 
-            <div id="booking" ">
-
-                <h1 style="font-size: 30px;">Book a Room</h1>
+            <div id="booking">
+            <div class="booking-form">
+                <h1 style="font-size: 30px; margin-top: 10px;">Book a Room</h1>
 
                 <form method="get" style="display: flex; flex-direction: column;">
 
                     <label class="text-uppercase" for="Full-Name">Your Full Name</label>
-                    <input type="text" name="Full-Name" placeholder="Your Full Name..." required="true">
+                    <input type="text" name="Full-Name" class="form-input" placeholder="Your Full Name..." required="true">
                     
                     <label class="text-uppercase" for="Check-In">Arrival</label>
-                    <input id="checkInDate" type="date" name="Check-In" placeholder="Check-In Date..." required="true" onchange="validateDates()">
+                    <input id="checkInDate" type="date" name="Check-In" class="form-input" placeholder="Check-In Date..." required="true" onchange="validateDates()">
 
                     <label class="text-uppercase" for="Check-Out">Departure</label>
-                    <input id="checkOutDate" type="date" name="Check-Out" placeholder="Check-Out Date..." required="true" onchange="validateDates()">
+                    <input id="checkOutDate" type="date" class="form-input" name="Check-Out" placeholder="Check-Out Date..." required="true" onchange="validateDates()">
 
                     <label class="text-uppercase" for="Adults">Adults</label>
-                    <select name="Adults" required="true" id="adultsSelect" onchange="validateAdults()">
+                    <select name="Adults" required="true" class="form-input" id="adultsSelect" onchange="validateAdults()">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -140,7 +140,7 @@
                     </select>
 
                     <label class="text-uppercase" for="Children">Children</label>
-                    <select name="Children" id="childrenSelect">
+                    <select name="Children" class="form-input" id="childrenSelect">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -149,6 +149,7 @@
 
                     <button id="formBtn" class="btn btn-primary" type="submit">Check Availability</button>
                 </form>
+            </div>
             </div>
 
         </section>

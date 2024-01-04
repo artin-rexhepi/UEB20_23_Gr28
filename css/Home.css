@@ -116,6 +116,7 @@ button#backToTopBtn.show {
     margin: 100px auto;
 }
 
+
 #booking{
     display: flex;
     flex-direction: column;
@@ -127,19 +128,36 @@ button#backToTopBtn.show {
     font-family: "Poppins";
 }
 
+.booking-form {
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #8f859e;
+    outline: none;
+    background: #ffffff;
+    transition: background 0.2s, border-color 0.2s;
+}
+
 button#formBtn{
     padding: 12px 32px;
-    margin: 10px 0;
-    background-color: transparent;
+    margin: 10px 4px;
+    background-color: #8f859e;
     border-color: #8f859e;
-    color: #8f859e;
+    color: white;
     transition: all  ease-in 0.3s;
 }
 
 button#formBtn:hover{
-    background-color: #8f859e;
+    background-color: #eeee;
     border-color: #8f859e;
-    color: white;
+    color: #8f859e;
 }
 
 .abt-us-home{
