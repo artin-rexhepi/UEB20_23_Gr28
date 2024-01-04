@@ -2,6 +2,66 @@
     font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
+.logoja{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.logoja img{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-top: 1px solid #a3a3a3 ;
+    border-bottom: 1px solid #a3a3a3;
+    font-family: "Poppins";
+}
+
+.navbar img{
+    margin: 0 10px;
+}
+
+.navbar ul{
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li{
+    margin: 0 10px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: all ease-in 0.2s;
+}
+
+.navbar a:hover{
+    font-family: Poppins;
+    color: #8f859e;
+}
+
 .contacts{
     display: flex;
     align-items: center;
@@ -15,6 +75,7 @@
     background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
     color: white;
     font-family: "Poppins";
+    margin-top: 20px;
 }
 
 .contacts h1{
@@ -228,5 +289,82 @@ textarea {
     color: black;
     text-decoration: none;
     transition: all ease-in 0.2s;
+}
+
+footer{
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgb(243, 243, 243);
+    align-self: center;
+    width: 80vw;
+    font-family: "Poppins";
+}
+.footer-main{
+    display: flex;
+    flex-direction: grid;
+    justify-content: space-between;
+
+}
+.footer-main div{
+    margin: 20px;
+}
+.footer-copyright{
+    float: right;
+    color:rgb(155, 155, 155) ;
+    font-size: small;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    color: rgb(143, 133, 158);
+}
+.footer-weekendweekdays{
+    color: rgb(143, 133, 158);
+
+}
+.footer-newsletter-textfield{
+    width: 90%;
+    padding: 1vw;
+    margin: 0.5vw;
+    border: none;
+}
+.footer-newsletter-subscribebtn{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color:white;
+    background-color:rgb(143, 133, 158) ;
+    transition: transform 0.05s ease, background-color 0.5s ease;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+.footer-location-icon,.footer-call-icon{
+    height: 15px;
+    margin-right: 10px;
+}
+.footer-socials-icon{
+
+    margin: 5px;
+    height:35px;
+    width: 35px;
+}
+.footer-socials{
+    text-align: center;
+    margin-left: 15px;
+}
+.footer-socials-icon:hover{
+    transform: scale(1.05);
+}
+.footer-main-opening{
+
+    justify-content: left;
+}
+
+.footer-newsletter-subscribebtn:hover{
+    transform: scale(1.02);
+    background-color: rgb(152, 143, 165) ;
 }
 

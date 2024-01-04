@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
-    <link rel="stylesheet" href="/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Contacts.css">
 </head>
 <body>
+
+    <div class="logoja">
+        <img src="../assets/images/Logo.png" alt="Logo" />
+    </div>
+    <header class="navbar">
+        <div></div>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+            <li><a href="./About-Us.html">About Us</a></li>
+            <li><a href="./Contacts">Contacts</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+            <li><a href="./Events.html">Events</a></li>
+        </ul>
+        <a href="../pages/login-signup.html">
+            <img src="../assets/images/login-icon.png" alt="login-icon">
+        </a>
+    </header>
 
     <section class="contacts">
         <h1>Contacts</h1>
@@ -43,10 +60,10 @@
             <p>Get Social</p>
             <hr></hr>
             <ul>
-                <li><a href="#"><img src="/assets/images/ig.png" alt=""></a></li>
-                <li><a href="#"><img src="/assets/images/fb.png" alt=""></a></li>
-                <li><a href="#"><img src="/assets/images/tw.png" alt=""></a></li>
-                <li><a href="#"><img src="/assets/images/yt.png" alt=""></a></li>
+                <li><a href="#"><img src="../assets/images/ig.png" alt=""></a></li>
+                <li><a href="#"><img src="../assets/images/fb.png" alt=""></a></li>
+                <li><a href="#"><img src="../assets/images/tw.png" alt=""></a></li>
+                <li><a href="#"><img src="../assets/images/yt.png" alt=""></a></li>
             </ul>
         </div>
 
@@ -54,7 +71,7 @@
         <p>Phone</p>
         <hr></hr>
         <ul>
-            <li><img src="/assets/images/phone.png" alt=""></li>
+            <li><img src="../assets/images/phone.png" alt=""></li>
             <li><a href="#">1-800-1234-567</a></li>
         </ul>
 
@@ -65,7 +82,7 @@
             <p>Address</p>
             <hr></hr>
             <ul>
-                <li><img src="/assets/images/location.png" alt=""></li>
+                <li><img src="../assets/images/location.png" alt=""></li>
                 <li><a href="#">267 Park Avenue New York, NY 90210</a></li>
             </ul>
         
@@ -77,13 +94,64 @@
             <hr></hr>
             <ul>
 
-                <li><img src="/assets/images/clock.png" alt=""></li>
+                <li><img src="../assets/images/clock.png" alt=""></li>
                 <li><p>We work every day 9:00-23:00</p></li>
 
             </ul>
     </div>
 </div>
 </div>
+
+<footer>
+    <div class="row footer-main">
+        <div class="col-md-3 footer-main-opening">
+            <h2>Opening Hours</h2>
+                <p><span class="footer-weekendweekdays">Weekdays:</span> 8:00 AM - 8:00 PM</p>
+                <p><span class="footer-weekendweekdays">Weekends:</span> 9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="col-md-3 footer-main-adress">
+            <h2 >Address</h2>
+                <p><span><a href="#"
+                            target="_blank">
+                            <address><img src="/assets\images\location.png" class="footer-location-icon">6036 Richmond Hwy, Alexandria, VA 2230</address>
+                        </a></span></p>
+                <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1 (409) 987–5874</a></p>
+        </div>
+        <div class="col-md-3 footer-main-newsletter">
+            <h2>Join our Newsletter</h2>
+            <form>
+                <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
+                <button  id= "SubscribeBtn "class="footer-newsletter-subscribebtn" onclick="playAudio()">Subscribe</button>
+                <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
+                <script>
+                    // Get references to the button and audio element
+                    const subscribeButton = document.getElementById('SubscribeBtn');
+                    const subscribeAudio = document.getElementById('SubscribeAudio');
+
+                    // Add a function to play the audio
+                    function playAudio() {
+                        // Play the audio when the button is clicked
+                        subscribeAudio.play();
+                    };
+                </script>
+            </form>
+        </div>
+        
+    </div>
+    <div class="footer-socials">
+        <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
+                class="footer-socials-icon"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
+                class="footer-socials-icon"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
+                class="footer-socials-icon"></a>
+    </div>
+    
+    <div class="footer-copyright">
+        &copy; Royal Villas. All Rights Reserved
+    </div>
+    
+</footer>
 </section>
 </body>
 </html>
