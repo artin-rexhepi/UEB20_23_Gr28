@@ -7,9 +7,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    left: 0;
-    right: 0;
-    margin: 30px 0;
+    position: relative;
+    left: 0px;
+    right: 0px;
     height: 300px;
     width: 100%;
     background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
@@ -53,25 +53,26 @@
 }
 
 .form{
+    width: 70%;
+    height: 100%;
     padding-left: 10px;
     padding-right: 10px;
     display: block;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    display: block;
 }
 
 #h2{
-    font-size: 60px;
+    font-size: 50px;
     color: black;
 }
 
-#pg{
-    color: #fbfbfb;
-}
-
-form{
-    display: block;
+.form p{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #cbcbcb;
 }
 
 .form input[type=text]{
@@ -100,6 +101,7 @@ textarea {
     padding: 12px 20px;
     box-sizing: border-box;
     border: none;
+    color: #aeaeae;
     background-color: #f1f1f1;
     font-size: 16px;
     resize: none;
@@ -126,3 +128,105 @@ textarea {
     margin: 8px 0px;
     cursor: pointer;
 }
+.form input[type=submit]:hover{
+    color: #054766;
+    background-color: #7abedd;
+}
+
+.elemets{
+    font-size: 16px;
+}
+.social ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    
+}
+.social ul li{
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.social ul li a img{
+    display: inline-block;
+    margin: 5px 0;
+    width: 25px;
+    height: 25px;
+}
+.phone ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+}
+.phone ul li{
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.phone ul li img{
+    display: inline;
+    margin: 5px 0;
+    width: 25px;
+    height: 25px;
+}
+.phone ul li a{
+    font-family: "Poppins";
+    color: black;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+.phone ul li a:hover{
+    color: #adadad;
+}
+.addres ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+}
+.addres ul li{
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.addres ul li img{
+    display: inline;
+    margin: 5px 0;
+    width: 25px;
+    height: 25px;
+}
+.addres ul li a{
+    font-family: "Poppins";
+    color: black;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+.addres ul li a:hover{
+    color: #adadad;
+}
+.opening ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+}
+.opening ul li{
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.opening ul li img{
+    display: inline;
+    margin: 5px 0;
+    width: 25px;
+    height: 25px;
+}
+.opening ul li a{
+    font-family: "Poppins";
+    color: black;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+
