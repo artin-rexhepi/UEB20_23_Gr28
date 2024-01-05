@@ -147,7 +147,7 @@
     box-sizing: border-box;
     background-color: #f1f1f1;
 }
-.form input[type=number]{
+.form input[type=tel]{
     width: 40%;
     height: 55px;
     padding: 12px 20px;

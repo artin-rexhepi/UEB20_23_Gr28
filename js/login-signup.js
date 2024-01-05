@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
         const termsChecked = termsCheckbox.checked;
 
-        if (allFieldsFilled && passwordsMatch && termsChecked) {
+        if (allFieldsFilled && passwordsMatch && termsChecked && verificated==true) {
             createAccountButton.disabled = false;
             createAccountButton.classList.remove("form-button-disabled");
         } else {
@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
     });
 
+    let verificated = false;
     dropZone.addEventListener('drop', function (e) {
         e.preventDefault();
         const data = e.dataTransfer.getData('text/plain');
@@ -155,6 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (draggedElement === draggableImage) {
             this.appendChild(draggedElement); // Append the draggableFigure to dropZone
             verificationResult.textContent = 'You are human!';
+            verificated=true;
+            validateForm();
+        }
+        else {
+            verificated=false;
+            validateForm();
         }
     });
 });
