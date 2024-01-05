@@ -85,6 +85,37 @@ const validateAdults = () => {
     }
 };
 
+// -------------------------- Kodi per funksionalitetin e karoselit ne home page --------------------------
+
+let slides = document.querySelectorAll('.slide');
+let btns = document.querySelectorAll('.btn');
+let currentSlide = 1;
+
+const manualNavigation = (manual) => {
+
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    
+    btns.forEach((slide) => {
+        btn.classList.remove('active');
+     })
+    })
+
+    
+
+    slides[manual].classList.add('.active');
+    btns[manual].classList.add('.active');
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        manualNavigation(i);
+        currentSlide = i;
+    })
+})
+
+
+
 // -------------------------- Butoni qe ridirekton tek booking form --------------------------
 const scrollToElement = () => {
     const destinacioniElement = document.getElementById('booking');
