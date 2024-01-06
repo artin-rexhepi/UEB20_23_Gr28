@@ -35,7 +35,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
+    position: relative;
     top: 400px;
     left: 180px;
 }
@@ -45,14 +45,14 @@ body{
     font-size: 45px;
     font-family: Arial, Arial, Helvetica, sans-serif;
     font-weight: bold;
-    position: absolute;
+    position: relative;
     top: 370px;
     left: 800px;
 }
 
 .text p{
     color: rgb(116, 111, 111);
-    position: absolute;
+    position: relative;
     margin-top: 210px;
     left: 800px;
     white-space: pre-line;
