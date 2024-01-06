@@ -31,7 +31,7 @@ body{
 .img-recepsioni{
     width: 500px;
     height: 500px;
-    background-image: url(Recepsioni.jpg);
+    background-image: url(../assets/images/Recepsioni.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
