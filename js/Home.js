@@ -32,88 +32,64 @@
 
 // -------------------------- Validimi i formes per rezervim --------------------------
 function validateDates() {
-    // Merr vlerat e check-in dhe check-out
-    let checkInDate = new Date(document.getElementById('checkInDate').value);
-    let checkOutDate = new Date(document.getElementById('checkOutDate').value);
+    try {
+        // Merr vlerat e check-in dhe check-out
+        let checkInDate = new Date(document.getElementById('checkInDate').value);
+        let checkOutDate = new Date(document.getElementById('checkOutDate').value);
 
-    // Merr daten aktuale
-    let currentDate = new Date();
+        // Merr daten aktuale
+        let currentDate = new Date();
 
-    // Data minimale kur mund te kryhet nje check-in eshte nje jave nga data aktuale
-    let minCheckInDate = new Date(currentDate);
-    minCheckInDate.setDate(currentDate.getDate() + 6);
+        // Data minimale kur mund te kryhet nje check-in eshte nje jave nga data aktuale
+        let minCheckInDate = new Date(currentDate);
+        minCheckInDate.setDate(currentDate.getDate() + 6);
 
-    // Rezervuesi duhet te rrije se paku nje dite qe te mund te bej check-out
-    // Pra data minimale kur mund te bej check-out eshte 1 dite pasi ka bere check-in
-    let minCheckOutDate = new Date(checkInDate);
-    minCheckOutDate.setDate(checkInDate.getDate() + 1);
+        // Rezervuesi duhet te rrije se paku nje dite qe te mund te bej check-out
+        // Pra data minimale kur mund te bej check-out eshte 1 dite pasi ka bere check-in
+        let minCheckOutDate = new Date(checkInDate);
+        minCheckOutDate.setDate(checkInDate.getDate() + 1);
 
-    // Validimi i dates se check-in
-    if (checkInDate < currentDate || checkInDate < minCheckInDate) {
-        alert("Invalid check-in date. Must be at least 7 days from today.");
+        // Validimi i dates se check-in
+        if (checkInDate < currentDate || checkInDate < minCheckInDate) {
+            throw new Error("Invalid check-in date. Must be at least 7 days from today.");
+        }
+
+        // Validimi i dates se check-out
+        if (checkOutDate < minCheckOutDate) {
+            throw new Error("Invalid check-out date. Must be at least a day from the check-in date.");
+        }
+
+        // Sigurimi qe data e check-out te mos mund te behet para dates se check-in
+        if (checkOutDate <= checkInDate) {
+            throw new Error("Invalid check-out date. Must be later than check-in date.");
+        }
+
+        // Sigurimi qe datat e selektuara nuk kane kaluar. Pra nuk jane ne te shkuaren.
+        if (checkInDate < currentDate || checkOutDate < currentDate) {
+            throw new Error("Invalid dates. Please select future dates.");
+        }
+    } catch (error) {
+        console.error("Validation error:", error.message);
+        alert(error.message);
         document.getElementById('checkInDate').value = "";
-    }
-
-    // Validimi i dates se check-out
-    if (checkOutDate < minCheckOutDate) {
-        alert("Invalid check-out date. Must be at least a day from the check-in date.");
         document.getElementById('checkOutDate').value = "";
     }
-
-    // Sigurimi qe data e check-out te mos mund te behet para dates se check-in
-    if (checkOutDate <= checkInDate) {
-        alert("Invalid check-out date. Must be later than check-in date.");
-        document.getElementById('checkOutDate').value = "";
-    }
-
-    // Sigurimi qe datat e selektuara nuk kane kaluar. Pra nuk jane ne te shkuaren.
-    if (checkInDate < currentDate || checkOutDate < currentDate) {
-        alert("Invalid dates. Please select future dates.");
-        document.getElementById('checkInDate').value = "";
-        document.getElementById('checkOutDate').value = "";
-    }
-
 }
 
 const validateAdults = () => {
-    const adultsSelect = document.getElementById('adultsSelect');
-    const adultsValue = adultsSelect.value; // e konverton ne numer te sistemit decimal.
+    try {
+        const adultsSelect = document.getElementById('adultsSelect');
+        const adultsValue = parseInt(adultsSelect.value, 10); // e konverton ne numer te sistemit decimal.
 
-    if(adultsValue === "0"){
-        alert("Invalid number of recipients.");
-        adultsSelect.value= "";
+        if (isNaN(adultsValue) || adultsValue === 0) {
+            throw new Error("Invalid number of recipients.");
+        }
+    } catch (error) {
+        console.error("Validation error in validateAdults:", error.message);
+        alert(error.message);
+        adultsSelect.value = "";
     }
 };
-
-// -------------------------- Kodi per funksionalitetin e karoselit ne home page --------------------------
-
-let slides = document.querySelectorAll('.slide');
-let btns = document.querySelectorAll('.btn');
-let currentSlide = 1;
-
-const manualNavigation = (manual) => {
-
-    slides.forEach((slide) => {
-        slide.classList.remove('active');
-    
-    btns.forEach((slide) => {
-        btn.classList.remove('active');
-     })
-    })
-
-    
-
-    slides[manual].classList.add('.active');
-    btns[manual].classList.add('.active');
-}
-
-btns.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-        manualNavigation(i);
-        currentSlide = i;
-    })
-})
-
 
 
 // -------------------------- Butoni qe ridirekton tek booking form --------------------------
