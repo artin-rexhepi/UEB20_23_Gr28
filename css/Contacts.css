@@ -102,7 +102,7 @@
 
 .components{
     padding-top: 65px;
-    padding-bottom: 75px;
+    padding-bottom: 10px;
 }
 
 .shell{
@@ -259,6 +259,10 @@ textarea {
 .phone ul li a:hover{
     color: #8F859E;
 }
+
+.addres {
+    margin-top: 2px;
+}
 .addres ul{
     position: relative;
     display: flex;
@@ -310,12 +314,16 @@ textarea {
     transition: all ease-in 0.2s;
 }
 
+.opening p {
+    margin-bottom: 1px;
+}
+
 
 
 
 
 footer{
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
