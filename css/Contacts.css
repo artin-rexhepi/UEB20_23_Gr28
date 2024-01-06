@@ -87,7 +87,7 @@
     right: 0px;
     height: 300px;
     width: 100%;
-    background-image: url(https://livedemo00.template-help.com/wt_51453/images/breadcrumbs-01.jpg);
+    background-image: url(https://images.pexels.com/photos/3435213/pexels-photo-3435213.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
     color: white;
     font-family: "Poppins";
     margin-top: 20px;
@@ -327,6 +327,10 @@ textarea {
     color: black;
     text-decoration: none;
     transition: all ease-in 0.2s;
+}
+
+.opening ul li p:hover {
+    color: #8F859E;
 }
 
 .opening p {
