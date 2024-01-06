@@ -51,7 +51,7 @@ body{
 }
 
 .text p{
-    color: gray;
+    color: rgb(116, 111, 111);
     position: absolute;
     margin-top: 210px;
     left: 800px;
