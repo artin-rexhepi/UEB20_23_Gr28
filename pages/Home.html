@@ -37,9 +37,15 @@
         }
 
         /* Styles to center the video */
-        video{
+        .video1{
             width: auto;
             height: 500px;
+            object-fit: cover;
+        }
+
+        .video2{
+            width: auto;
+            height: 450px;
             object-fit: cover;
         }
 
@@ -85,8 +91,6 @@
 
         <section class="carousel-n-booking">
 
-           
-            
         <div class="carosuel-container">
             <input type="radio" name="slide" id="c1" checked>
             <label for="c1" class="carousel-card">
@@ -166,7 +170,8 @@
 
             <!-- Video thumbnail with onclick event to open the modal -->
             <div class="abt-us-video" onclick="openModal()">
-                <img src="../assets/images/newThumbnail.png" alt="Video Thumbnail" style="cursor: pointer;"/>
+                <img src="../assets/images/video-thumbnail-1.jpg" alt="Video Thumbnail" />
+                <div class="image-overlay-1" style="cursor: pointer;"></div>
             </div>
 `
             <!-- The Modal -->
@@ -176,7 +181,7 @@
 
                 <div class="modal-content">
                 <!-- Video element -->
-                <video controls autoplay muted>
+                <video class="video1" controls autoplay muted>
                     <source src="../assets/video/hotel-video.mp4" type="video/mp4">
                 </video>
                 </div>
@@ -221,8 +226,21 @@
                 <a href="./About-Us.html" id="poolBtn" class="btn btn-primary">Learn More</a>
             </div>
 
-            <div class="pool-container">
+            <div class="pool-container" onclick="openModal2()" >
                 <img src="../assets/images/indoor-pool.jpg" width="auto" height="400px"/>
+                <div class="image-overlay-2" style="cursor: pointer;"></div>
+            </div>
+
+            <div id="myModal2" class="modal">
+
+                <img class="close-btn" src="../assets/images/close-video.png" width="auto" height="auto" onclick="closeModal2()"/>
+
+                <div class="modal-content">
+                <!-- Video element -->
+                <video class="video2" controls autoplay muted>
+                    <source src="../assets/video/pool-showcase-video.mp4" type="video/mp4">
+                </video>
+                </div>
             </div>
         </div>
     </section>
@@ -358,5 +376,12 @@
     // Function to close the modal
     const closeModal = () => {
       document.getElementById('myModal').style.display = 'none';
+    }
+
+    const openModal2 = () => {
+        document.getElementById('myModal2').style.display = 'flex';
+    }
+    const closeModal2 = () => {
+        document.getElementById('myModal2').style.display = 'none';
     }
   </script>

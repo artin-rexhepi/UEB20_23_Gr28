@@ -277,6 +277,18 @@ button#formBtn:hover{
     height: auto;
 }
 
+.image-overlay-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+
+}
+
 .abt-us-text{
     display: flex;
     width: 50%;
@@ -287,14 +299,25 @@ button#formBtn:hover{
 }
 
 .abt-us-video{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
     height: 100%;
-    width: 85%;
+    width: 60%;
+    overflow: hidden;
+    margin-right: 40px;
 }
+
+.abt-us-video:hover .image-overlay-1{
+    opacity: 1;
+}
+
 
 .abt-us-video img{
     height: 100%;
-    width: inherit;
-    object-fit: cover;
+    width: 100%;
+    object-fit: cover; 
 }
 
 
@@ -361,9 +384,28 @@ color: #8f859e;
 }
 
 
+.pool-section .pool-container{
+    position: relative;
+}
+
+.image-overlay-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.pool-container:hover .image-overlay-2{
+    opacity: 1;
+}
+
 
 .pool-section .pool-container img{
-object-fit: cover;
+    object-fit: cover;
 }
 
 
