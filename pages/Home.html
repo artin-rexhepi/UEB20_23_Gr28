@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/Home.css">
 
     <!-- Bootstrap -->
@@ -13,10 +14,6 @@
     <title>Spring Hotel &amp; Spa</title>
     
     <style>
-        .slideImg{
-            object-fit: contain;
-        }
-
         .modal{
             display: none;
             position: fixed;
@@ -32,7 +29,7 @@
         /* Styles for the modal content */
         .modal-content {
             max-width: 800px;
-            max-height: 65vh;
+            max-height: 63vh;
             width: 100%;
             height: 100%;
             overflow: hidden;
@@ -42,7 +39,7 @@
         /* Styles to center the video */
         video{
             width: auto;
-            height: 450px;
+            height: 500px;
             object-fit: cover;
         }
 
@@ -74,27 +71,6 @@
     
     <header class="navbar">
         <div></div>
-        <!-- Mobile Part -->
-        <a id="topMenuTrigger" class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasTop" role="button" aria-controls="offcanvasExample">
-            <img id="mobile-nav-icon" src="../assets/images/burger-menu-icon.png" />
-        </a>          
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasTopLabel">Spring Villas &amp; Spa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul>
-                        <li><a href="./Home.html">Home</a></li>
-                        <li><a href="./About-Us.html">About Us</a></li>
-                        <li><a href="./Contacts.html">Contacts</a></li>
-                        <li><a href="./FAQ.html">FAQ</a></li>
-                        <li><a href="./Events.html">Events</a></li>
-                    </ul>
-                </div>
-            </div>
-        <!--  -->
-
         <ul>
             <li><a href="./Home.html">Home</a></li>
             <li><a href="./About-Us.html">About Us</a></li>
@@ -109,67 +85,45 @@
 
         <section class="carousel-n-booking">
 
-            <!-- Fotot qe do te perdoren per karosel:
-
-                contenti per slide 1:
-            ../assets/images/slide-01.jpg
-            <h1 class="text-start">Your Ideal Retreat</h1>
-            <h4 class="text-start">Enjoy the world of relaxation</h4>
-            <h3 class="text-start">and tranquility!</h3>
-
-            -----------------------------
-
-
-                contenti per slide 2:
-            ../assets/images/slide-02.jpg
-            <h1 class="text-start">Relax &amp; Unwind</h1>
-            <h4 class="text-start">Experience the luxurious level</h4>
-            <h3 class="text-start">of our spa treatments</h3>
-
-
-            -----------------------------
-
-
-                contenti per slide 3
-            ../assets/images/slide-03.jpg
-            <h1 class="text-start">Revitalize &amp; Relax</h1>
-            <h4 class="text-start">Indulge in our top-notch</h4>
-            <h3 class="text-start">spa resort</h3>
-
-            -->
-            <div class="img-slider">
-                <div class="slide">
-                    <img src="../assets/images/slide-01.jpg" alt=""/>
-                    <div class="info">
-                        <h2>Slide 01</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+           
+            
+        <div class="carosuel-container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="carousel-card">
+                <div class="card-row">
+                    <div class="card-icon">1</div>
+                    <div class="card-description">
+                        <h4>Your Ideal Retreat</h4>
+                        <p>Enjoy the world of relaxation and tranquility!</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="../assets/images/slide-02.jpg" alt=""/>
-                    <div class="info">
-                        <h2>Slide 02</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="carousel-card">
+                <div class="card-row">
+                    <div class="card-icon">2</div>
+                    <div class="card-description">
+                        <h4>Relax &amp; Unwind</h4>
+                        <p>Experience the luxurious level of our spa treatments</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="../assets/images/slide-03.jpg" alt=""/>
-                    <div class="info">
-                        <h2>Slide 03</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="carousel-card">
+                <div class="card-row">
+                    <div class="card-icon">3</div>
+                    <div class="card-description">
+                        <h4>Revitalize &amp; Relax</h4>
+                        <p>Indulge in our top-notch spa resort</p>
                     </div>
                 </div>
-
-                <div class="navigation">
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                </div>
-            </div>
+            </label>
+        </div>
 
           
 
-            <div id="booking">
+        <div id="booking">
+
             <div class="booking-form">
                 <h1 style="font-size: 30px; margin-top: 10px;">Book a Room</h1>
 
@@ -204,7 +158,7 @@
                     <button id="formBtn" class="btn btn-primary" type="submit">Check Availability</button>
                 </form>
             </div>
-            </div>
+        </div>
 
         </section>
 
@@ -224,7 +178,6 @@
                 <!-- Video element -->
                 <video controls autoplay muted>
                     <source src="../assets/video/hotel-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
                 </div>
             </div>
@@ -265,7 +218,7 @@
                     Daily aqua aerobics classes help keep guests fit while on the road.
                 </p>
 
-                <a href="./AboutUs.html" id="poolBtn" class="btn btn-primary">Learn More</a>
+                <a href="./About-Us.html" id="poolBtn" class="btn btn-primary">Learn More</a>
             </div>
 
             <div class="pool-container">
@@ -273,11 +226,6 @@
             </div>
         </div>
     </section>
-
-    <section class="gallery">
-        
-    </section>
-
 
 
     <section class="blog">
