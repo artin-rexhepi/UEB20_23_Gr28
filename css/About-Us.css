@@ -53,10 +53,10 @@ body{
 .text p{
     color: rgb(116, 111, 111);
     position: relative;
-    margin-top: 210px;
-    left: 800px;
+    margin-top: 0px;
+    left: 625px;
     white-space: pre-line;
-    padding-right: 120px;
+    padding-right: 0px;
     line-height: 25px;
 }
 
