@@ -119,14 +119,14 @@ body{
 }
 
 .carousel-card > .card-row{
-    color: white;
+    color: #fff;
     display: flex;
     flex-wrap: nowrap;
 }
 
 .carousel-card > .card-row > .card-icon{
     background-color: #8f859e;
-    color: white;
+    color: #fff;
     border-radius: 50%;
     width: 50px;
     display: flex;
@@ -149,13 +149,12 @@ body{
 }
 
 .card-description p{
-    color: white;
+    color:  #fff ;
     padding-top: 5px;
 }
 
 .card-description h4{
     text-transform: uppercase;
-
 }
 
 input{
@@ -374,7 +373,7 @@ color: #8f859e;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.502);
     opacity: 0; 
     transition: opacity 0.3s ease; 
 }
@@ -425,7 +424,7 @@ footer{
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
-    width: 87%;
+    width: 80vw;
     font-family: "Poppins";
 }
 .footer-main{
@@ -454,8 +453,10 @@ footer a:hover{
 
 }
 .footer-newsletter-textfield{
-    padding: 10px;
-    margin: 5px;
+    display: block;
+    width: 90%;
+    padding: 1vw;
+    margin: 0.5vw;
     border: none;
 }
 .footer-newsletter-subscribebtn{
@@ -495,6 +496,7 @@ footer a:hover{
     transform: scale(1.02);
     background-color: rgb(152, 143, 165) ;
 }
+
 
 button#backToTopBtn {
     opacity: 0;

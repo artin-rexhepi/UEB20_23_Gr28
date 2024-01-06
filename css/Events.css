@@ -158,7 +158,7 @@ footer{
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
-    width: 87%;
+    width: 80vw;
     font-family: "Poppins";
 }
 .footer-main{
@@ -187,8 +187,10 @@ footer a:hover{
 
 }
 .footer-newsletter-textfield{
-    padding: 10px;
-    margin: 5px;
+    display: block;
+    width: 90%;
+    padding: 1vw;
+    margin: 0.5vw;
     border: none;
 }
 .footer-newsletter-subscribebtn{

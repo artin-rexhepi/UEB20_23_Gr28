@@ -338,7 +338,7 @@ textarea {
 
 
 footer{
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 15px;
     background-color: rgb(243, 243, 243);
     align-self: center;
@@ -371,6 +371,7 @@ footer a:hover{
 
 }
 .footer-newsletter-textfield{
+    display: block;
     width: 90%;
     padding: 1vw;
     margin: 0.5vw;
