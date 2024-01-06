@@ -28,6 +28,38 @@ body{
     margin: 0;
 }
 
+.img-recepsioni{
+    width: 500px;
+    height: 500px;
+    background-image: url(Recepsioni.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 400px;
+    left: 180px;
+}
+
+.text h1{
+    color: black;
+    font-size: 40px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 370px;
+    left: 800px;
+}
+
+.text p{
+    color: gray;
+    position: absolute;
+    margin-top: 210px;
+    left: 800px;
+    white-space: pre-line;
+    padding-right: 120px;
+    line-height: 25px;
+}
+
 
 
 .navbar{
