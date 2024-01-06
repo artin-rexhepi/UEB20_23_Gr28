@@ -184,13 +184,16 @@ body {
     display: flex;
     align-items: center;
     margin-top: 2px; /* Adjust the margin as needed */
+    background-color: white;
 }
 
 .figure-box {
     display: flex;
     justify-content: space-between;
     margin: 0px;
-    
+    border-radius: 35px;
+    padding: 10px;
+    border: 1px solid #000;
 }
 
 .draggable-figure {
