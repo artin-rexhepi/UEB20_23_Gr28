@@ -170,12 +170,12 @@ body{
     width: 33.33%;
     padding: 10px;
     overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .table-image {
     width: 100%;
     height: auto;
-    transition: filter 0.3s;
 }
 
 .table-overlay {
@@ -191,6 +191,10 @@ body{
     color: white;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.table-cell:hover {
+    opacity: 0.8;
 }
 
 .table-cell:hover .table-overlay {
@@ -300,6 +304,7 @@ body{
     transition: 0.3s;
     cursor: pointer;
     box-shadow: -0.5vw -0.5vw 0.025vw rgb(143, 133, 158);
+
 }
 
 .member-img {
@@ -309,10 +314,12 @@ body{
 
 .team-member:hover {
     box-shadow: -1vw -1vw 0.25vw rgb(143, 133, 158);
+    cursor:default;
 }
 
 .team-member:hover .member-img {
-    filter: brightness(0.3);
+    filter: brightness(0.97);
+
 }
 
 .member-info {
@@ -325,31 +332,6 @@ body{
     margin-bottom: 0.5vw;
 }
 
-.social-icons {
-    height: 1.5vw;
-    position: absolute;
-    top: 6vw;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    padding-left: 2px;
-}
-
-.social-icons img {
-    margin: 2px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 0.5vw;
-    text-decoration: none;
-    color: #333;
-    font-size: 1vw;
-}
-
-.team-member:hover .social-icons {
-    display: flex;
-}
 
 .member-title {
     font-size: 0.8vw;

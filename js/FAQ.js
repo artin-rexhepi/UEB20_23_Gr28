@@ -1,9 +1,19 @@
-document.querySelectorAll('.question').forEach(function (question) {
-            question.addEventListener('click', function () {
-                var answer = this.nextElementSibling;
-                answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
-            });
+$(document).ready(function () {
+        $('.question').click(function () {
+            var answer = $(this).next();
+            answer.slideToggle();
         });
+
+        $('.show-answer').click(function () {
+            var answer = $(this).closest('li').find('.answer');
+            answer.fadeIn();
+        });
+
+        $('.remove-answer').click(function () {
+            var answer = $(this).closest('li').find('.answer');
+            answer.fadeOut();
+        });
+    });
 
 
 // -------------------------- Butoni back to top --------------------------

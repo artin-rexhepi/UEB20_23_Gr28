@@ -416,6 +416,27 @@ color: #8f859e;
     border-top: 1px solid #8f859e;
         
 }
+.filter-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-container label,
+.filter-container select,
+.filter-container button {
+    margin-right: 10px;
+}
+.filter-container select{
+    border-color: #8f859e;
+    color: #8f859e;
+}
+.filter-container button{
+    background-color: #8f859e;
+    color: white;
+    border: none;
+    border-radius: 10%;
+}
 
 
 /*FOOTER*/

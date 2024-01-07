@@ -12,6 +12,26 @@
     <!--  -->
     <script defer src="../js/Home.js"></script>
     <title>Spring Hotel &amp; Spa</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Function to filter and show/hide cards
+            function filterPosts(selectedMonth) {
+                $('.card').hide().filter(function () {
+                    return $(this).data('posted-month').toLowerCase() === selectedMonth.toLowerCase() || selectedMonth === 'all';
+                }).show();
+            }
+
+            // Event listener for the filter button
+            $('#filterButton').on('click', function () {
+                var selectedMonth = $('#monthFilter').val();
+                filterPosts(selectedMonth);
+            });
+        });
+    </script>
+
     
     <style>
         .modal{
@@ -254,8 +274,18 @@
     <section class="blog">
 
         <h1>Our Blog</h1>
+        <div class="filter-container">
+            <label for="monthFilter"></label>
+            <select id="monthFilter">
+                <option value="all">All Months</option>
+                <option value="june">June</option>
+                <option value="august">August</option>
+                <!-- Add options for other months -->
+            </select>
+            <button id="filterButton">Filter</button>
+        </div>
 
-        <div class="card mb-3" style="max-width: 800px;  margin-top: 30px;">
+        <div class="card mb-3" style="max-width: 800px;  margin-top: 30px;" data-posted-month="June">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="../assets/images/blog-image-1.jpg" class="img-fluid rounded-start" alt="Blog Image 1">
@@ -272,7 +302,7 @@
             </div>
           </div>
 
-          <div class="card mb-3" style="max-width: 800px;">
+          <div class="card mb-3" style="max-width: 800px;" data-posted-month="June">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="../assets/images/blog-image-2.jpg" class="img-fluid rounded-start" alt="Blog Image 1">
@@ -289,7 +319,7 @@
             </div>
           </div>
 
-          <div class="card mb-3" style="max-width: 800px;">
+          <div class="card mb-3" style="max-width: 800px;" data-posted-month="August">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="../assets/images/blog-image-3.jpg" class="img-fluid rounded-start" alt="Blog Image 3">

@@ -122,12 +122,10 @@ body{
 
 }
 
-/* Style the list item */
 li {
     margin-bottom: 20px;
 }
 
-/* Style the question */
 .question {
     list-style-type: disc;
     font-weight: bold;
@@ -138,7 +136,6 @@ li {
     border-radius: 5px;
 }
 
-/* Style the answer (initially hidden) */
 .answer {
     display: none;
     margin-top: 10px;
@@ -147,11 +144,6 @@ li {
     border-radius: 5px;
 }
 
-/* Show the answer when the question is hovered */
-.question:checked + .answer {
-    display: block;
-    
-}
 
 footer{
     margin: 20px auto;

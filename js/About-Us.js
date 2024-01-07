@@ -86,59 +86,47 @@ const reviewsData = [
         
 
         const teamMembers = [
-            { name: 'Theresa Smith', title: 'General Manager', imgSrc: '/assets/images/staff1.jpg', social: { instagram: '/assets/images/instagram.png', facebook: '/assets/images/facebook.png', twitter: '/assets/images/twitter.png' } },
-            { name: 'Albert Mills', title: 'Cosmotologist', imgSrc: '/assets/images/staff2.jpg', social: { instagram: '/assets/images/instagram.png', facebook: '/assets/images/facebook.png', twitter: '/assets/images/twitter.png' } },
-            { name: 'Sandra Adams', title: 'Receptionist', imgSrc: '/assets/images/staff3.jpg', social: { instagram: '/assets/images/instagram.png', facebook: '/assets/images/facebook.png', twitter: '/assets/images/twitter.png' } }
-        ];
+    { name: 'Theresa Smith', title: 'General Manager', imgSrc: '/assets/images/staff1.jpg' },
+    { name: 'Albert Mills', title: 'Cosmotologist', imgSrc: '/assets/images/staff2.jpg' },
+    { name: 'Sandra Adams', title: 'Receptionist', imgSrc: '/assets/images/staff3.jpg' }
+];
 
-        // Function to create a team member card
-        function createTeamMemberCard(member) {
-            const teamContainer = document.getElementById('teamContainer');
+// Function to create a team member card
+function createTeamMemberCard(member) {
+    const memberCard = document.createElement('div');
+    memberCard.classList.add('team-member');
 
-            const memberCard = document.createElement('div');
-            memberCard.classList.add('team-member');
-            
-            const img = document.createElement('img');
-            img.classList.add('member-img');
-            img.src = member.imgSrc;
-            img.alt = `Profile of ${member.name}`;
+    const img = document.createElement('img');
+    img.classList.add('member-img');
+    img.src = member.imgSrc;
+    img.alt = `Profile of ${member.name}`;
 
-            const infoContainer = document.createElement('div');
-            infoContainer.classList.add('member-info');
+    const infoContainer = document.createElement('div');
+    infoContainer.classList.add('member-info');
 
-            const name = document.createElement('div');
-            name.classList.add('member-name');
-            name.textContent = member.name;
+    const name = document.createElement('div');
+    name.classList.add('member-name');
+    name.textContent = member.name;
 
-            const title = document.createElement('div');
-            title.classList.add('member-title');
-            title.textContent = member.title;
+    const title = document.createElement('div');
+    title.classList.add('member-title');
+    title.textContent = member.title;
 
-            
+    infoContainer.appendChild(name);
+    infoContainer.appendChild(title);
+    memberCard.appendChild(img);
+    memberCard.appendChild(infoContainer);
 
-            const socialIcons = document.createElement('a');
-            socialIcons.classList.add('social-icons');
+    return memberCard;
+}
 
-            // Create social icons
-            for (const platform in member.social) {
-                const iconImg = document.createElement('img');
-                iconImg.src = member.social[platform];
- 
-                socialIcons.appendChild(iconImg);
-            }
-            infoContainer.appendChild(name);
-            
-            infoContainer.appendChild(title);
-            memberCard.appendChild(img);
-            memberCard.appendChild(infoContainer);
-            memberCard.appendChild(socialIcons);
+// Map the teamMembers array to an array of team member cards
+const teamMemberCards = teamMembers.map(createTeamMemberCard);
 
-            // Append the card to the team container
-            teamContainer.appendChild(memberCard);
-        }
+// Append each card to the team container
+const teamContainer = document.getElementById('teamContainer');
+teamMemberCards.forEach(card => teamContainer.appendChild(card));
 
-        // Create team member cards
-        teamMembers.forEach(createTeamMemberCard);
 
 
         // -------------------------- Butoni back to top --------------------------
