@@ -17,14 +17,14 @@
     
     <script>
         $(document).ready(function () {
-            // Function to filter and show/hide cards
+            // Funksioni qe filtron dhe shfaq/fsheh kartat
             function filterPosts(selectedMonth) {
                 $('.card').hide().filter(function () {
                     return $(this).data('posted-month').toLowerCase() === selectedMonth.toLowerCase() || selectedMonth === 'all';
                 }).show();
             }
 
-            // Event listener for the filter button
+            // Event listener per buttonin e filterit
             $('#filterButton').on('click', function () {
                 var selectedMonth = $('#monthFilter').val();
                 filterPosts(selectedMonth);
@@ -188,7 +188,7 @@
 
         <section class="abt-us-home">
 
-            <!-- Video thumbnail with onclick event to open the modal -->
+            <!-- Video thumbnail me onlcick event per te hapur modalin -->
             <div class="abt-us-video" onclick="openModal()">
                 <img src="../assets/images/video-thumbnail-1.jpg" alt="Video Thumbnail" />
                 
@@ -197,7 +197,7 @@
                 </div>
             </div>
 `
-            <!-- The Modal -->
+            <!-- Modali -->
             <div id="myModal" class="modal">
 
                 <img class="close-btn" src="../assets/images/close-video.png" width="auto" height="auto" onclick="closeModal()"/>
@@ -274,6 +274,7 @@
     <section class="blog">
 
         <h1>Our Blog</h1>
+        
         <div class="filter-container">
             <label for="monthFilter"></label>
             <select id="monthFilter">
@@ -366,13 +367,13 @@
                         onclick="playAudio()">Subscribe</button>
                     <audio id="SubscribeAudio" src="/assets\audio\button-click.mp3" type="audio/mp3"></audio>
                     <script>
-                        // Get references to the button and audio element
+                        // Marrim referencat per buttonat
                         const subscribeButton = document.getElementById('SubscribeBtn');
                         const subscribeAudio = document.getElementById('SubscribeAudio');
 
-                        // Add a function to play the audio
+                        // Funksioni qe luan audion
                         function playAudio() {
-                            // Play the audio when the button is clicked
+                            // Luaj audio kur shtypet butoni
                             subscribeAudio.play();
                         };
                     </script>

@@ -408,6 +408,39 @@ color: #8f859e;
     padding-bottom: 20px;
 }
 
+.blog .col-md-8{
+    background-color: transparent;
+    color: #000;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.blog .col-md-8:hover{
+    background-color: #8f859e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.blog .col-md-8:hover p{
+    border-top: 1px solid #fff;
+}
+
+
+.blog .col-md-8 img{
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    transition: all ease-in 0.3s;
+}
+
+
+.blog .col-md-8:hover img{
+    border-color: #fff;
+    background-color: #fff;
+}
+
+
+
 
 .card-body .card-text{
     text-align: left;
