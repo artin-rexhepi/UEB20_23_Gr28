@@ -29,8 +29,13 @@ body{
 }
 
 .img-recepsioni{
-    width: 500px;
-    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+    height: 50%;
+    margin: 0;
     background-image: url(../assets/images/Recepsioni.jpg);
     background-size: cover;
     background-repeat: no-repeat;
