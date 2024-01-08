@@ -416,6 +416,8 @@ color: #8f859e;
     border-top: 1px solid #8f859e;
         
 }
+
+
 .filter-container {
     display: flex;
     align-items: center;
@@ -430,12 +432,16 @@ color: #8f859e;
 .filter-container select{
     border-color: #8f859e;
     color: #8f859e;
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid #8f859e;
 }
 .filter-container button{
     background-color: #8f859e;
+    padding: 5px 10px;
     color: white;
     border: none;
-    border-radius: 10%;
+    border-radius: 12px;
 }
 
 
