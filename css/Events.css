@@ -131,6 +131,21 @@ body {
     font-family: "Poppins";
 }
 
+.btn-costum {
+    vertical-align: middle;
+}
+.btn-costum:hover .ig-svg {
+    display: none;
+    animation: ease-in;
+}
+.different-color-ig{
+    display: none;
+}
+.btn-costum:hover .different-color-ig{
+    display: inline;
+}
+
+
 
 /*Butoni back to top*/
 button#backToTopBtn {
