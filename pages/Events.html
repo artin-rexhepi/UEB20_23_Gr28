@@ -148,30 +148,66 @@
                 <h2>Address</h2>
                 <p><span><a href="https://www.google.com/maps/search/6036+Richmond+Hwy,+Alexandria,+VA+2230/@38.7860603,-77.0740174,16.25z?entry=ttu"
                             target="_blank">
-                            <address style="margin: 0;"><img src="../assets/images/location.png"
+                            <address style="margin: 0;"><img src="/assets\images\location.png"
                                     class="footer-location-icon">6036 Richmond Hwy, Alexandria, VA 2230</address>
                         </a></span></p>
     
-                <p><img src="../assets/images/call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1
+                <p><img src="/assets\images\call.png" class="footer-call-icon">Call Us: <a href="tel:+1 (409) 987–5874">+1
                         (409) 987–5874</a></p>
-                <a href="mailto:spring@hotel.com"><img src="../assets/images/email.png"
+                <a href="mailto:spring@hotel.com"><img src="/assets/images/email.png"
                         class="footer-call-icon">spring@hotel.com</a>
             </div>
             <div class="col-md-3 footer-main-newsletter">
                 <h2>Join our Newsletter</h2>
-                <form>
-                    <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield">
-                    <button id="SubscribeBtn " class="footer-newsletter-subscribebtn"
-                        onclick="playAudio()">Subscribe</button>
-                    <audio id="SubscribeAudio" src="../assets/audio/button-click.mp3" type="audio/mp3"></audio>
-                    <script>
-                        // Get references to the button and audio element
-                        const subscribeButton = document.getElementById('SubscribeBtn');
-                        const subscribeAudio = document.getElementById('SubscribeAudio');
+            <form onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield" id="emailInput">
+                <button type="submit" class="footer-newsletter-subscribebtn" id="SubscribeBtn" onclick="playAudio()">Subscribe</button>
+                <audio id="SubscribeAudio" src="/assets/audio/button-click.mp3" type="audio/mp3"></audio>
 
-                        // Add a function to play the audio
+                <output id="subscribeOutput" for="emailInput"></output>
+            </form>
+
+            <script>
+                function subscribeNewsletter(event) {
+                    event.preventDefault(); // Prevent form submission
+
+                    var emailInput = document.getElementById('emailInput');
+                    var subscribeOutput = document.getElementById('subscribeOutput');
+                    var subscribeButton = document.getElementById('SubscribeBtn');
+                    const subscribeAudio = document.getElementById('SubscribeAudio');
+
+                    // Check if the email is valid (you can add more sophisticated validation)
+                    if (isValidEmail(emailInput.value)) {
+                        // Display a success message in the output area
+
+                        subscribeOutput.textContent = `Thank you for subscribing!`;
+                        subscribeButton.style.display = 'none';
+
+                        // You may want to submit the form to a server for actual subscription
+                        // For demonstration purposes, we'll just clear the email input after a delay
+                        setTimeout(function () {
+                            emailInput.value = '';
+                        }, 3000);
+                    } else {
+                        // Display an error message if the email is not valid
+                        subscribeOutput.textContent = `Please enter a valid email address.`;
+                    }
+                }
+
+                function isValidEmail(email) {
+                    // Add your email validation logic here
+                    // This is a simple example, you may want to use a regular expression or a more robust validation method
+                    return email.includes('@');
+                }
+
+
+
+
+                        // Marrim referencat per buttonat
+
+                        // Funksioni qe luan audion
                         function playAudio() {
-                            // Play the audio when the button is clicked
+                            // Luaj audio kur shtypet butoni
                             subscribeAudio.play();
                         };
                     </script>
@@ -181,11 +217,11 @@
             
         </div>
         <div class="footer-socials">
-            <a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/instagram.png"
+            <a href="https://www.instagram.com/" target="_blank"><img src="/assets\images\instagram.png"
                     class="footer-socials-icon"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/facebook.png"
+            <a href="https://www.facebook.com/" target="_blank"><img src="/assets\images\facebook.png"
                     class="footer-socials-icon"></a>
-            <a href="https://twitter.com/" target="_blank"><img src="../assets/images/twitter.png"
+            <a href="https://twitter.com/" target="_blank"><img src="/assets\images\twitter.png"
                     class="footer-socials-icon"></a>
         </div>
     
@@ -194,7 +230,7 @@
         </div>
     
    
-    </footer>  
+    </footer>    
     
    
     
