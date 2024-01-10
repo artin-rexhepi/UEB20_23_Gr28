@@ -102,3 +102,29 @@ const scrollToElement = () => {
     }
 };
 
+// -------------------------- Ridirektimi ne klikimin e blogut --------------------------
+
+function LinkObject(linkId, linkUrl) {
+    this.linkId = linkId; //id e div-it qe do te klikohet
+    this.linkUrl = linkUrl; // url-ja e linkut qe deshirojme qe te vizitojme
+
+    // Metoda qe ben set up click event listener
+    this.setupClickListener = function () {
+        document.getElementById(this.linkId).addEventListener('click', () => {
+            window.location.href = this.linkUrl;
+        });
+    };
+}
+
+// Krijimi i instacave te objektit per secilin link
+const link1 = new LinkObject('artikulli1', 'https://boutiquehotelnews.com/');
+const link2 = new LinkObject('artikulli2', 'https://www.anantara.com/en/blog');
+const link3 = new LinkObject('artikulli3', 'https://traveltriangle.com/blog/hotels-in-unawatuna/');
+
+// Per secilen instance te objektit te linqeve, perdorim metoden per ridirektim tek linqet e deklaruara
+link1.setupClickListener();
+link2.setupClickListener();
+link3.setupClickListener();
+
+
+
