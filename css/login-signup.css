@@ -177,13 +177,13 @@ body {
     margin-bottom: 0.5rem;
 }
 .drop-zone {
-    border: 2px dashed #000; /* Change the border properties as needed */
+    outline-style: dashed;
     border-radius: 60%;
-    width: 2rem; /* Adjust the height as per your design */
+    width: 2rem; 
     height: 2rem;
     display: flex;
     align-items: center;
-    margin-top: 2px; /* Adjust the margin as needed */
+    margin-top: 2px; 
     background-color: white;
 }
 
@@ -267,4 +267,13 @@ body {
 }
 mark{
     background-color: #a59db2;
+}
+.newsletter-radio-main{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    color: #8F859E;
+}
+.newsletter-radio-main form{
+    padding: 0px;
 }
