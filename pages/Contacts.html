@@ -7,6 +7,8 @@
     <title>Spring Hotel | Contact</title>
     <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/Contacts.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
 
@@ -44,14 +46,33 @@
         answer your questions.
     </p>
 
-    <form action="">
+    <form id="censorForm" action="">
         <input type="text" id="name" placeholder="Your name">
-        <input type="tel" name="numbers" id="phone"  placeholder="Phone"><br>
-        <textarea name="coment" id="textarea" cols="30" rows="10" placeholder="Your message"></textarea><br>
-        <div class="form-email-send"><input type="email" name="mail" id="email" placeholder="E-mail">
-        <input type="submit" value="Send " class="send-msg-button" >
+        <input type="tel" name="numbers" id="phone" placeholder="Phone"><br>
+        <textarea name="comment" id="textarea" cols="30" rows="10" placeholder="Your message"></textarea><br>
+        <div class="form-email-send">
+            <input type="email" name="mail" id="email" placeholder="E-mail">
+            <input type="submit" value="Send" class="send-msg-button">
         </div>
     </form>
+    
+    <script>
+            $(document).ready(function () {
+                $('#censorForm').submit(function (event) {
+                    event.preventDefault();
+
+                    var textareaValue = $('#textarea').get(0).value;
+                    var curseWords = ['FN', 'FIM', 'fn', "fim"];
+
+                    curseWords.forEach(function (curseWord) {
+                        var regex = new RegExp('\\b' + curseWord + '\\b', 'gi');
+                        textareaValue = textareaValue.replace(regex, '****');
+                    });
+
+                    console.log('Censored Message:', textareaValue);
+                });
+            });
+    </script>
     
     </div>
 
@@ -197,7 +218,41 @@
 
 
 </footer>    
+    <button id="backToTopBtn" title="Go to top" onclick="topFunciton()"><img width="30px" height="30px"
+            src="../assets/images/backToTop.png" /></button>-
+    <audio id="backToTopSound" src="/assets\audio\whoosh.mp3" type="audio/mp3"></audio>
 
+    <script>
+        // -------------------------- Butoni back to top --------------------------
+
+            document.addEventListener("DOMContentLoaded", () => {
+                // Get the button
+                const mybutton = document.getElementById("backToTopBtn");
+
+                // When the user scrolls down 90px from the top of the document, show the button
+                window.onscroll = () => scrollFunction();
+
+                const scrollFunction = () => {
+                    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                        mybutton.style.display = "block";
+                        mybutton.classList.add("show");
+                    } else {
+                        mybutton.classList.remove("show");
+                    }
+                };
+
+                // When the user clicks on the button, scroll to the top of the document
+                mybutton.addEventListener("click", () => topFunction());
+
+                const topFunction = () => {
+                    // Smooth scroll to the top
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                };
+            });
+    </script>
 </section>
 </body>
 </html>

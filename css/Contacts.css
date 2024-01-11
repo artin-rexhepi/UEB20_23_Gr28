@@ -419,3 +419,21 @@ footer a:hover{
     background-color: rgb(152, 143, 165) ;
 }
 
+button#backToTopBtn {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #8f859e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button#backToTopBtn.show {
+    opacity: 1;
+}
