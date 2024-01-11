@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="/css/Home.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
@@ -363,7 +363,7 @@
                 <h2>Join our Newsletter</h2>
             <form onsubmit="subscribeNewsletter(event)">
                 <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield" id="emailInput">
-                <button type="submit" class="footer-newsletter-subscribebtn" id="SubscribeBtn">Subscribe</button>
+                <button type="submit" class="footer-newsletter-subscribebtn" id="SubscribeBtn" onclick="playAudio()">Subscribe</button>
                 <audio id="SubscribeAudio" src="/assets/audio/button-click.mp3" type="audio/mp3"></audio>
 
                 <output id="subscribeOutput" for="emailInput"></output>
@@ -371,7 +371,7 @@
 
             <script>
                 function subscribeNewsletter(event) {
-                    event.preventDefault();
+                    event.preventDefault(); 
 
                     var emailInput = document.getElementById('emailInput');
                     var subscribeOutput = document.getElementById('subscribeOutput');
@@ -379,9 +379,11 @@
                     const subscribeAudio = document.getElementById('SubscribeAudio');
                     if (isValidEmail(emailInput.value)) {
 
+
                         subscribeOutput.textContent = `Thank you for subscribing!`;
                         subscribeButton.style.display = 'none';
-                        subscribeAudio.play();
+
+
                         setTimeout(function () {
                             emailInput.value = '';
                         }, 3000);
@@ -394,6 +396,10 @@
                 function isValidEmail(email) {
                     return email.includes('@');
                 }
+
+                function playAudio() {
+                    subscribeAudio.play();
+                };
             </script>
             </div>
             </div>
