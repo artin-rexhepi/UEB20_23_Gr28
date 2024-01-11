@@ -146,58 +146,40 @@
         </div>
         <div class="col-md-3 footer-main-newsletter">
             <h2>Join our Newsletter</h2>
-        <form onsubmit="subscribeNewsletter(event)">
-            <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield" id="emailInput">
-            <button type="submit" class="footer-newsletter-subscribebtn" id="SubscribeBtn" onclick="playAudio()">Subscribe</button>
-            <audio id="SubscribeAudio" src="/assets/audio/button-click.mp3" type="audio/mp3"></audio>
+            <form onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Enter your e-mail" required class="footer-newsletter-textfield" id="emailInput">
+                <button type="submit" class="footer-newsletter-subscribebtn" id="SubscribeBtn">Subscribe</button>
+                <audio id="SubscribeAudio" src="/assets/audio/button-click.mp3" type="audio/mp3"></audio>
+            
+                <output id="subscribeOutput" for="emailInput"></output>
+            </form>
+            
+            <script>
+                function subscribeNewsletter(event) {
+                    event.preventDefault();
 
-            <output id="subscribeOutput" for="emailInput"></output>
-        </form>
+                    var emailInput = document.getElementById('emailInput');
+                    var subscribeOutput = document.getElementById('subscribeOutput');
+                    var subscribeButton = document.getElementById('SubscribeBtn');
+                    const subscribeAudio = document.getElementById('SubscribeAudio');
+                    if (isValidEmail(emailInput.value)) {
 
-        <script>
-            function subscribeNewsletter(event) {
-                event.preventDefault(); // Prevent form submission
-
-                var emailInput = document.getElementById('emailInput');
-                var subscribeOutput = document.getElementById('subscribeOutput');
-                var subscribeButton = document.getElementById('SubscribeBtn');
-                const subscribeAudio = document.getElementById('SubscribeAudio');
-
-                // Check if the email is valid (you can add more sophisticated validation)
-                if (isValidEmail(emailInput.value)) {
-                    // Display a success message in the output area
-
-                    subscribeOutput.textContent = `Thank you for subscribing!`;
-                    subscribeButton.style.display = 'none';
-
-                    // You may want to submit the form to a server for actual subscription
-                    // For demonstration purposes, we'll just clear the email input after a delay
-                    setTimeout(function () {
-                        emailInput.value = '';
-                    }, 3000);
-                } else {
-                    // Display an error message if the email is not valid
-                    subscribeOutput.textContent = `Please enter a valid email address.`;
-                }
-            }
-
-            function isValidEmail(email) {
-                // Add your email validation logic here
-                // This is a simple example, you may want to use a regular expression or a more robust validation method
-                return email.includes('@');
-            }
-
-
-
-
-                    // Marrim referencat per buttonat
-
-                    // Funksioni qe luan audion
-                    function playAudio() {
-                        // Luaj audio kur shtypet butoni
+                        subscribeOutput.textContent = `Thank you for subscribing!`;
+                        subscribeButton.style.display = 'none';
                         subscribeAudio.play();
-                    };
-                </script>
+                        setTimeout(function () {
+                            emailInput.value = '';
+                        }, 3000);
+                    } else {
+
+                        subscribeOutput.textContent = `Please enter a valid email address.`;
+                    }
+                }
+
+                function isValidEmail(email) {
+                    return email.includes('@');
+                }
+            </script>
             </form>
         </div>
         </div>

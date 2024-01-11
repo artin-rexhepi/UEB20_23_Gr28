@@ -349,7 +349,7 @@ body{
     font-size: 1vw;
 }
 
-footer{
+footer {
     margin: 20px auto;
     padding: 15px;
     background-color: rgb(243, 243, 243);
@@ -357,74 +357,88 @@ footer{
     width: 80vw;
     font-family: "Poppins";
 }
-.footer-main{
+
+.footer-main {
     display: flex;
     flex-direction: grid;
     justify-content: space-between;
 
 }
-.footer-main div{
+
+.footer-main div {
     margin: 20px;
 }
-.footer-copyright{
+
+.footer-copyright {
     float: right;
-    color:rgb(155, 155, 155) ;
+    color: rgb(155, 155, 155);
     font-size: small;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: black;
 }
-footer a:hover{
+
+footer a:hover {
     color: rgb(143, 133, 158);
 }
-.footer-weekendweekdays{
+
+.footer-weekendweekdays {
     color: rgb(143, 133, 158);
 
 }
-.footer-newsletter-textfield{
+
+.footer-newsletter-textfield {
     display: block;
     width: 90%;
     padding: 1vw;
     margin: 0.5vw;
     border: none;
 }
-.footer-newsletter-subscribebtn{
+
+.footer-newsletter-subscribebtn {
     padding: 10px;
     width: 100px;
     border: none;
-    color:white;
-    background-color:rgb(143, 133, 158) ;
+    color: white;
+    background-color: rgb(143, 133, 158);
     transition: transform 0.05s ease, background-color 0.5s ease;
     margin: 5px;
     border-radius: 5px;
 
 }
-.footer-location-icon,.footer-call-icon{
+
+.footer-location-icon,
+.footer-call-icon {
     height: 15px;
     margin-right: 10px;
 }
-.footer-socials-icon{
+
+.footer-socials-icon {
 
     margin: 5px;
-    height:35px;
+    height: 35px;
     width: 35px;
 }
-.footer-socials{
+
+.footer-socials {
     text-align: center;
     margin-left: 15px;
 }
-.footer-socials-icon:hover{
+
+.footer-socials-icon:hover {
     transform: scale(1.05);
 }
-.footer-main-opening{
+
+.footer-main-opening {
 
     justify-content: left;
 }
 
-.footer-newsletter-subscribebtn:hover{
+.footer-newsletter-subscribebtn:hover {
     transform: scale(1.02);
-    background-color: rgb(152, 143, 165) ;
+    background-color: rgb(152, 143, 165);
 }
 
 button#backToTopBtn {
