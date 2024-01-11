@@ -234,13 +234,30 @@ body {
     border-radius: 5px;
     max-width: 60%;
     height: 80%;
+    position: relative;
+}
+
+.close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .close-btn img{
+    border-radius: 50%;
+    border: 2px solid transparent;
+    padding: 5px;
     cursor: pointer;
-    justify-content:  right;
-
+    justify-content: center;
+    background-color: transparent;
+    transition: background-color ease-in-out 0.3s;
+    transition: border-color ease-in-out 0.3s;
 }
+
+.close-btn img:hover{
+    border-color: #8F859E;
+}
+
 #terms-download{
     padding: 6px;
     text-decoration: none;
@@ -248,6 +265,8 @@ body {
     border: 1px solid var(--color-primary);
     text-align: center;
     margin: 1px auto;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%); 
+    transition: all ease-in 0.3s;
 }
 #terms-download:hover{
     background: radial-gradient(circle, rgba(143, 133, 158, 1) 0%, rgba(96, 84, 115, 1) 100%);   

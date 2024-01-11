@@ -79,6 +79,7 @@ function validateDates() {
 const validateAdults = () => {
     try {
         const adultsSelect = document.getElementById('adultsSelect');
+
         const adultsValue = parseInt(adultsSelect.value, 10); // e konverton ne numer te sistemit decimal.
 
         if (isNaN(adultsValue) || adultsValue === 0) {
