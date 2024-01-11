@@ -476,6 +476,9 @@ color: #8f859e;
     border: none;
     border-radius: 12px;
 }
+.filter-container button:hover{
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(143, 133, 158, 1) 0%, rgba(151, 135, 175, 1) 84%);}
 
 
 /*FOOTER*/

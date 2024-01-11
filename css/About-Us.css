@@ -38,6 +38,7 @@ body{
     margin: 0;
     background-image: url(../assets/images/Recepsioni.jpg);
     background-size: cover;
+    background-origin: padding-box;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
