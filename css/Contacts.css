@@ -189,6 +189,7 @@ textarea {
     height: 55px;
     padding: 12px 20px;
     margin-right: 6px;
+    margin-top: 8px;
     color: #000;
     border: none;
     box-sizing: border-box;
@@ -196,6 +197,7 @@ textarea {
 }
 .form input[type=submit]{
     padding: 8px;
+    margin-top: 8px;
     width: 20%;
     height: 53px;
     border: none;
