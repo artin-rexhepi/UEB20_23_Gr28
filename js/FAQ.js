@@ -4,12 +4,12 @@ $(document).ready(function () {
             answer.slideToggle();
         });
 
-        $('.show-answer').click(function () {
+        $('.answer').click(function () {
             var answer = $(this).closest('li').find('.answer');
             answer.fadeIn();
         });
 
-        $('.remove-answer').click(function () {
+        $('.answer').click(function () {
             var answer = $(this).closest('li').find('.answer');
             answer.fadeOut();
         });
