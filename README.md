@@ -10,3 +10,7 @@ Contributors:
 3. Daris Dragusha
 4. Gent Podvorica
 5. Haki Pintolli
+
+
+Take a live preview of our work:
+https://radiant-fairy-7daf93.netlify.app/
